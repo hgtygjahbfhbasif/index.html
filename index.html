@@ -1204,7 +1204,7 @@
             <h3 class="hof-sub" data-i18n="hofByCategory">الأول في كل فئة</h3>
             <div class="hof-cats" id="hofCats"></div>
           </div>
-          <p class="hof-note" data-i18n="hofNote">الترتيب يعتمد حاليًا على الأصوات المسجّلة على هذا الجهاز فقط.</p>
+          <p class="hof-note" data-i18n="hofNote">الترتيب يعتمد على جميع الأصوات المسجّلة في قاعدة البيانات.</p>
         </div>
       </section>
 
@@ -1280,7 +1280,7 @@
 
         <div class="privacy-note">
           <svg aria-hidden="true"><use href="#i-lock"></use></svg>
-          <span data-i18n="privacyNote">في هذه النسخة يُحفظ التصويت محليًا على هذا الجهاز فقط ولا يتم إرسال بيانات شخصية إلى أي خادم.</span>
+          <span data-i18n="privacyNote">يُحفظ التصويت في قاعدة بيانات آمنة ليظهر في لوحة الشرف لجميع الزوار. لا يتم إرسال معلومات شخصية.</span>
         </div>
       </form>
     </div>
@@ -1290,10 +1290,15 @@
     <div class="toast" id="toast"><svg aria-hidden="true"><use href="#i-check"></use></svg><span id="toastText"></span></div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
     "use strict";
 
     const STORAGE_KEY = "east-riffa-teachers-day-2026-votes-v1";
+    const VOTER_ID_KEY = "east-riffa-teachers-day-2026-voter-id-v1";
+    const SUPABASE_URL = "https://vsdskzgvsgcprmiijrdz.supabase.co";
+    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_q8ss0PwIYCnoFMPoVmcNug_6lkAli5_";
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 
     const translations = {
       ar: {
@@ -1336,11 +1341,11 @@
         reasonHint: "10 أحرف على الأقل",
         confirmVote: "تأكيد التصويت",
         cancel: "إلغاء",
-        privacyNote: "في هذه النسخة يُحفظ التصويت محليًا على هذا الجهاز فقط ولا يتم إرسال بيانات شخصية إلى أي خادم.",
+        privacyNote: "يُحفظ التصويت في قاعدة بيانات آمنة ليظهر في لوحة الشرف لجميع الزوار. لا يتم إرسال معلومات شخصية.",
         reasonTooShort: "اكتب سببًا من 10 أحرف على الأقل قبل تأكيد التصويت.",
-        voteSaved: "تم تسجيل تصويتك وكلمة التقدير بنجاح على هذا الجهاز.",
+        voteSaved: "تم تسجيل تصويتك وكلمة التقدير بنجاح وحفظهما في قاعدة البيانات.",
         duplicateVote: "سبق تسجيل تصويت من هذا الجهاز في هذه الفئة.",
-        storageError: "تعذر حفظ التصويت على هذا المتصفح. تحقق من السماح بالتخزين المحلي.",
+        storageError: "تعذر حفظ التصويت. تحقق من اتصال الإنترنت وحاول مرة أخرى.",
         languageAria: "Switch to English",
         closeAria: "إغلاق",
         teacherRole: "معلم المدرسة",
@@ -1350,7 +1355,7 @@
         hofEmpty: "لا توجد أصوات بعد. كن أول من يصوّت!",
         hofTop: "الأعلى تصويتًا",
         hofByCategory: "الأول في كل فئة",
-        hofNote: "الترتيب يعتمد حاليًا على الأصوات المسجّلة على هذا الجهاز فقط.",
+        hofNote: "الترتيب يعتمد على جميع الأصوات المسجّلة في قاعدة البيانات.",
         votesWord: "صوت"
       },
       en: {
@@ -1393,11 +1398,11 @@
         reasonHint: "At least 10 characters",
         confirmVote: "Confirm Vote",
         cancel: "Cancel",
-        privacyNote: "In this version, your vote is stored locally on this device only. No personal information is sent to a server.",
+        privacyNote: "Your vote is stored in the shared database so the Hall of Fame can show results to all visitors. No personal information is sent.",
         reasonTooShort: "Please write at least 10 characters before confirming your vote.",
-        voteSaved: "Your vote and appreciation message were saved successfully on this device.",
+        voteSaved: "Your vote and appreciation message were saved successfully to the shared database.",
         duplicateVote: "A vote from this device has already been recorded in this category.",
-        storageError: "The vote could not be saved in this browser. Please check that local storage is allowed.",
+        storageError: "The vote could not be saved. Please check your internet connection and try again.",
         languageAria: "التبديل إلى العربية",
         closeAria: "Close",
         teacherRole: "School teacher",
@@ -1407,7 +1412,7 @@
         hofEmpty: "No votes yet. Be the first to vote!",
         hofTop: "Top Voted",
         hofByCategory: "Leader in Each Category",
-        hofNote: "Ranking currently reflects votes recorded on this device only.",
+        hofNote: "The ranking reflects all votes recorded in the shared database.",
         votesWord: "votes"
       }
     };
@@ -1529,24 +1534,60 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify(votes));
     }
 
+    function getVoterId() {
+      let voterId = localStorage.getItem(VOTER_ID_KEY);
+      if (!voterId) {
+        voterId = (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+        localStorage.setItem(VOTER_ID_KEY, voterId);
+      }
+      return voterId;
+    }
+
+    async function saveVoteToSupabase(vote) {
+      const { error } = await supabaseClient.from("votes").insert({
+        teacher: vote.teacherId,
+        vote: JSON.stringify(vote)
+      });
+      if (error) throw error;
+    }
+
+    async function getRemoteVotes() {
+      const { data, error } = await supabaseClient
+        .from("votes")
+        .select("teacher, vote");
+
+      if (error) throw error;
+      return Array.isArray(data) ? data : [];
+    }
+
 
     const hofEmpty = $("#hofEmpty");
     const hofBody = $("#hofBody");
     const hofPodium = $("#hofPodium");
     const hofCats = $("#hofCats");
 
-    // Local mode: counts come from this device's votes.
-    // When a shared backend exists, replace this with a server fetch returning { teacherId: count }.
-    function getTally() {
+    async function getTally() {
       const tally = {};
-      Object.values(getVotes()).forEach(vote => {
-        if (vote && vote.teacherId) tally[vote.teacherId] = (tally[vote.teacherId] || 0) + 1;
+      const remoteVotes = await getRemoteVotes();
+
+      remoteVotes.forEach(row => {
+        const teacherId = row.teacher || (() => {
+          try { return JSON.parse(row.vote || "{}").teacherId; } catch { return null; }
+        })();
+        if (teacherId) tally[teacherId] = (tally[teacherId] || 0) + 1;
       });
+
       return tally;
     }
 
-    function renderHallOfFame() {
-      const tally = getTally();
+    async function renderHallOfFame() {
+      let tally;
+      try {
+        tally = await getTally();
+      } catch (error) {
+        console.error("Could not load shared votes", error);
+        tally = {};
+      }
       const rows = [];
       categories.forEach(category => {
         (teachers[category.id] || []).forEach(teacher => {
@@ -1781,7 +1822,7 @@
       charCount.textContent = `${reasonInput.value.length} / 300`;
     }
 
-    function submitVote(event) {
+    async function submitVote(event) {
       event.preventDefault();
       if (!state.selectedTeacher) return;
 
@@ -1804,18 +1845,21 @@
       const teacher = (teachers[categoryId] || []).find(item => item.id === teacherId);
       if (!teacher) return;
 
-      votes[categoryId] = {
+      const vote = {
         teacherId,
         teacherNameAr: teacher.ar,
         teacherNameEn: teacher.en,
         reason,
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
+        voterId: getVoterId()
       };
 
       try {
+        await saveVoteToSupabase(vote);
+        votes[categoryId] = vote;
         saveVotes(votes);
       } catch (error) {
-        console.error("Vote storage failed", error);
+        console.error("Vote database storage failed", error);
         reasonError.textContent = t("storageError");
         return;
       }
