@@ -2,1951 +2,1636 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#12161d">
-  <meta name="color-scheme" content="light">
-  <meta name="description" content="احتفالية يوم المعلم 2026 في مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين — مساحة تقدير وتصويت للمعلمين.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="يوم المعلم 2026 | مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين">
-  <meta property="og:description" content="شكراً لمن يصنعون الفرق كل يوم. شارك كلمة تقدير وصوّت لمعلمك بمناسبة يوم المعلم 2026.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
-  <title>يوم المعلم 2026 | مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>يوم المعلم 2026 | أفضل معلم</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #f3f4f7;
-      --bg-soft: #e8ebf0;
-      --surface: rgba(255, 255, 255, 0.72);
-      --surface-strong: rgba(255, 255, 255, 0.9);
-      --surface-border: rgba(255, 255, 255, 0.75);
-      --stroke: rgba(18, 24, 36, 0.12);
-      --text: #12161d;
-      --muted: #5a6270;
-      --primary: #B30F23;
-      --primary-2: #5E0A15;
-      --accent: #8A0D1C;
-      --danger: #8A0D1C;
-      --shadow-sm: 0 8px 28px rgba(18, 24, 36, 0.08);
-      --shadow-md: 0 22px 70px rgba(18, 24, 36, 0.14);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --radius-sm: 14px;
-      --container: 1180px;
-      --font-ar-body: "Almarai", "Cairo", Arial, sans-serif;
-      --font-ar-heading: "Cairo", "Almarai", Arial, sans-serif;
-      --font-en: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Arial, sans-serif;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    * { box-sizing: border-box; }
+    :root {
+      --red: #b30f23;
+      --dark-red: #760817;
+      --light-red: #fff1f3;
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #171717;
+      --muted: #737373;
+      --border: #e7e7e7;
+      --gold: #d69b18;
+      --shadow: 0 15px 45px rgba(0,0,0,.08);
+    }
 
     html {
       scroll-behavior: smooth;
-      background: var(--bg);
     }
 
     body {
-      margin: 0;
-      min-height: 100vh;
+      font-family: "Almarai", sans-serif;
+      background: var(--bg);
       color: var(--text);
+      line-height: 1.8;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .flag {
+      height: 7px;
       background:
-        radial-gradient(circle at 12% 5%, rgba(94, 10, 21, 0.07), transparent 28%),
-        radial-gradient(circle at 88% 18%, rgba(40, 52, 72, 0.08), transparent 26%),
-        linear-gradient(180deg, #f7f8fa 0%, #eef0f4 55%, #f7f8fa 100%);
-      font-family: var(--font-ar-body);
-      overflow-x: hidden;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
+        linear-gradient(
+          to bottom,
+          #fff 0 33%,
+          #007a3d 33% 66%,
+          #ce1126 66%
+        );
     }
 
-    html[lang="en"] body { font-family: var(--font-en); }
-
-    h1, h2, h3, .brand-title, .eyebrow, .chip, .button, .language-toggle {
-      font-family: var(--font-ar-heading);
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
 
-    html[lang="en"] h1,
-    html[lang="en"] h2,
-    html[lang="en"] h3,
-    html[lang="en"] .brand-title,
-    html[lang="en"] .eyebrow,
-    html[lang="en"] .chip,
-    html[lang="en"] .button,
-    html[lang="en"] .language-toggle { font-family: var(--font-en); }
-
-    button, textarea { font: inherit; }
-    button { -webkit-tap-highlight-color: transparent; }
-
-    .page-shell {
-      position: relative;
-      isolation: isolate;
-      min-height: 100vh;
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 76px;
+      padding: 0 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
 
-    .ambient {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: -1;
+    .school-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--dark-red);
     }
 
-    .orb {
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(1px);
-      opacity: 0.75;
-      animation: drift 14s ease-in-out infinite alternate;
+    .school-sub {
+      font-size: 11px;
+      color: var(--muted);
     }
 
-    .orb.one {
-      width: 380px;
-      height: 380px;
-      top: 8%;
-      left: -110px;
-      background: radial-gradient(circle, rgba(94,10,21,0.10), rgba(94,10,21,0));
-    }
-
-    .orb.two {
-      width: 460px;
-      height: 460px;
-      top: 30%;
-      right: -170px;
-      background: radial-gradient(circle, rgba(40,52,72,0.12), rgba(40,52,72,0));
-      animation-delay: -4s;
-    }
-
-    .orb.three {
-      width: 360px;
-      height: 360px;
-      bottom: 0;
-      left: 28%;
-      background: radial-gradient(circle, rgba(94,10,21,0.06), rgba(94,10,21,0));
-      animation-delay: -8s;
-    }
-
-    @keyframes drift {
-      from { transform: translate3d(0, 0, 0) scale(1); }
-      to { transform: translate3d(24px, -18px, 0) scale(1.08); }
+    .lang {
+      border: 1px solid var(--border);
+      background: white;
+      padding: 10px 15px;
+      border-radius: 12px;
+      font-weight: 800;
     }
 
     .container {
-      width: min(calc(100% - 32px), var(--container));
-      margin-inline: auto;
-    }
-
-    .glass {
-      background: linear-gradient(145deg, rgba(255,255,255,0.88), rgba(255,255,255,0.60));
-      border: 1px solid var(--surface-border);
-      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.82);
-      backdrop-filter: blur(22px) saturate(150%);
-      -webkit-backdrop-filter: blur(22px) saturate(150%);
-    }
-
-    .topbar-wrap {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      padding: max(14px, env(safe-area-inset-top)) 0 0;
-    }
-
-    .topbar {
-      min-height: 72px;
-      border-radius: 24px;
-      padding: 10px 12px 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .brand-mark {
-      width: 46px;
-      height: 46px;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      flex: 0 0 auto;
-      color: #fff;
-      background: linear-gradient(145deg, #B30F23, #5E0A15);
-      box-shadow: 0 10px 26px rgba(179, 15, 35, 0.28), inset 0 1px 1px rgba(255,255,255,0.32);
-    }
-
-    .brand-mark svg { width: 25px; height: 25px; }
-
-    .brand-copy { min-width: 0; }
-
-    .brand-title {
-      margin: 0;
-      font-size: 15px;
-      font-weight: 800;
-      line-height: 1.4;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .brand-subtitle {
-      margin: 2px 0 0;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    .top-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex: 0 0 auto;
-    }
-
-    .icon-button,
-    .language-toggle {
-      border: 0;
-      color: var(--text);
-      background: rgba(255,255,255,0.68);
-      box-shadow: inset 0 0 0 1px rgba(18, 24, 36,0.09);
-      cursor: pointer;
-      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
-    }
-
-    .icon-button:hover,
-    .language-toggle:hover {
-      transform: translateY(-1px);
-      background: rgba(255,255,255,0.94);
-      box-shadow: 0 8px 18px rgba(18, 24, 36,0.08), inset 0 0 0 1px rgba(18, 24, 36,0.08);
-    }
-
-    .icon-button:focus-visible,
-    .language-toggle:focus-visible,
-    .button:focus-visible,
-    .category-card:focus-visible,
-    .teacher-card button:focus-visible,
-    textarea:focus-visible,
-    .modal-close:focus-visible {
-      outline: 3px solid rgba(179, 15, 35, 0.32);
-      outline-offset: 3px;
-    }
-
-    .language-toggle {
-      min-height: 44px;
-      border-radius: 14px;
-      padding: 0 14px;
-      font-weight: 800;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 22px;
     }
 
     .hero {
-      min-height: calc(100svh - 98px);
-      display: grid;
-      align-items: center;
-      padding: 58px 0 70px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(330px, 0.76fr);
-      align-items: center;
-      gap: 56px;
-    }
-
-    .hero-copy { animation: riseIn 760ms cubic-bezier(.2,.8,.2,1) both; }
-
-    .eyebrow {
-      width: fit-content;
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 9px 13px;
-      margin-bottom: 20px;
-      border-radius: 999px;
-      color: #B30F23;
-      background: rgba(255,255,255,0.68);
-      border: 1px solid rgba(179, 15, 35, 0.12);
-      box-shadow: 0 10px 30px rgba(18, 24, 36, 0.06);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .eyebrow svg { width: 18px; height: 18px; }
-
-    .hero h1 {
-      margin: 0;
-      max-width: 850px;
-      font-size: clamp(46px, 6.4vw, 86px);
-      line-height: 1.04;
-      letter-spacing: -0.035em;
-      font-weight: 800;
-      text-wrap: balance;
-    }
-
-    html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] .hero h1 { letter-spacing: 0; }
-
-    .gradient-text {
-      display: inline-block;
-      padding-bottom: 0.18em;
-      line-height: 1.25;
-      color: transparent;
-      background: linear-gradient(110deg, #5E0A15 10%, #B30F23 70%, #8A0D1C 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-
-    .hero-lead {
-      max-width: 710px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: clamp(17px, 2vw, 21px);
-      line-height: 1.95;
-      font-weight: 400;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .button {
-      min-height: 52px;
-      border: 0;
-      border-radius: 16px;
-      padding: 0 20px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 15px;
-      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
-    }
-
-    .button svg { width: 20px; height: 20px; }
-
-    .button.primary {
-      color: #fff;
-      background: linear-gradient(145deg, #B30F23, #5E0A15);
-      box-shadow: 0 14px 32px rgba(179, 15, 35, 0.28), inset 0 1px 1px rgba(255,255,255,0.25);
-    }
-
-    .button.primary:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 18px 38px rgba(179, 15, 35, 0.34); }
-
-    .button.secondary {
-      color: var(--text);
-      background: rgba(255,255,255,0.74);
-      box-shadow: inset 0 0 0 1px rgba(18, 24, 36, 0.10), 0 10px 24px rgba(18, 24, 36,0.06);
-    }
-
-    .button.secondary:hover { transform: translateY(-2px); background: rgba(255,255,255,0.94); }
-
-    .hero-visual {
-      position: relative;
+      min-height: 80vh;
       display: grid;
       place-items: center;
-      min-height: 480px;
-      animation: riseIn 900ms 120ms cubic-bezier(.2,.8,.2,1) both;
+      padding: 80px 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(179,15,35,.12), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(214,155,24,.10), transparent 25%);
     }
 
-    .hero-orbit {
-      position: absolute;
-      width: min(430px, 92%);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      border: 1px solid rgba(179, 15, 35, 0.11);
-      animation: slowSpin 28s linear infinite;
-    }
-
-    .hero-orbit::before,
-    .hero-orbit::after {
-      content: "";
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #B30F23;
-      box-shadow: 0 0 0 7px rgba(179, 15, 35,0.10);
-    }
-
-    .hero-orbit::before { top: 12%; left: 18%; }
-    .hero-orbit::after { bottom: 8%; right: 22%; background: #8A0D1C; box-shadow: 0 0 0 7px rgba(179, 15, 35,0.10); }
-
-    @keyframes slowSpin { to { transform: rotate(360deg); } }
-
-    .tribute-card {
-      position: relative;
-      width: min(390px, 88vw);
-      min-height: 390px;
-      border-radius: 44px;
-      padding: 34px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-      transform: rotate(2.5deg);
-      box-shadow: 0 35px 80px rgba(18, 24, 36, 0.18), inset 0 1px 0 rgba(255,255,255,0.90);
-      animation: cardFloat 6s ease-in-out infinite;
-    }
-
-    html[dir="ltr"] .tribute-card { transform: rotate(-2.5deg); }
-
-    .tribute-card::after {
-      content: "";
-      position: absolute;
-      top: -80%;
-      left: -65%;
-      width: 80%;
-      height: 240%;
-      transform: rotate(18deg);
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.68), transparent);
-      animation: shimmer 7s ease-in-out infinite;
-      pointer-events: none;
-    }
-
-    @keyframes cardFloat {
-      0%,100% { transform: rotate(2.5deg) translateY(0); }
-      50% { transform: rotate(1deg) translateY(-10px); }
-    }
-
-    html[dir="ltr"] .tribute-card { animation-name: cardFloatLtr; }
-    @keyframes cardFloatLtr {
-      0%,100% { transform: rotate(-2.5deg) translateY(0); }
-      50% { transform: rotate(-1deg) translateY(-10px); }
-    }
-
-    @keyframes shimmer {
-      0%, 25% { transform: translateX(-150%) rotate(18deg); }
-      55%, 100% { transform: translateX(310%) rotate(18deg); }
-    }
-
-    .tribute-symbol {
-      width: 92px;
-      height: 92px;
-      border-radius: 28px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      background: linear-gradient(145deg, #B30F23, #5E0A15);
-      box-shadow: 0 18px 36px rgba(179, 15, 35,0.27), inset 0 1px 1px rgba(255,255,255,0.28);
-    }
-
-    .tribute-symbol svg { width: 48px; height: 48px; }
-
-    .tribute-kicker {
-      margin: 22px 0 4px;
-      color: #B30F23;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .tribute-title {
-      margin: 0;
-      font-size: clamp(30px, 4vw, 44px);
-      line-height: 1.18;
-      font-weight: 800;
-    }
-
-    .tribute-note {
-      margin: 18px 0 0;
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 14px;
-    }
-
-    .mini-badge-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 22px;
-    }
-
-    .chip {
-      padding: 8px 11px;
-      border-radius: 999px;
-      color: #2c3440;
-      background: rgba(255, 255, 255,0.88);
-      box-shadow: inset 0 0 0 1px rgba(18, 24, 36,0.09);
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    section.content-section { padding: 88px 0; scroll-margin-top: 110px; }
-
-    .section-head {
-      max-width: 760px;
-      margin: 0 auto 38px;
+    .hero-content {
       text-align: center;
+      max-width: 900px;
     }
 
-    .section-index {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-      color: #B30F23;
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--light-red);
+      color: var(--red);
+      border: 1px solid #f0cbd0;
+      border-radius: 999px;
       font-size: 13px;
       font-weight: 800;
-    }
-
-    .section-index svg { width: 18px; height: 18px; }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(32px, 4vw, 52px);
-      line-height: 1.18;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-    }
-
-    .section-head p {
-      margin: 14px auto 0;
-      color: var(--muted);
-      line-height: 1.9;
-      font-size: 16px;
-    }
-
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .category-card {
-      position: relative;
-      min-height: 170px;
-      border: 1px solid rgba(18, 24, 36,0.09);
-      border-radius: 24px;
-      padding: 22px;
-      color: var(--text);
-      text-align: start;
-      background: rgba(255,255,255,0.76);
-      box-shadow: 0 12px 34px rgba(18, 24, 36,0.07), inset 0 1px 0 rgba(255,255,255,0.9);
-      backdrop-filter: blur(18px) saturate(140%);
-      -webkit-backdrop-filter: blur(18px) saturate(140%);
-      cursor: pointer;
-      overflow: hidden;
-      transition: transform 220ms cubic-bezier(.2,.8,.2,1), border-color 220ms ease, box-shadow 220ms ease;
-    }
-
-    .category-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -30px -55px auto;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(179, 15, 35,0.16), transparent 68%);
-      transition: transform 300ms ease;
-    }
-
-    .category-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(179, 15, 35,0.18);
-      box-shadow: 0 20px 44px rgba(18, 24, 36,0.12), inset 0 1px 0 rgba(255,255,255,0.92);
-    }
-
-    .category-card:hover::after { transform: scale(1.3); }
-
-    .category-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      color: #B30F23;
-      background: linear-gradient(145deg, #eceff3, #ffffff);
-      box-shadow: inset 0 0 0 1px rgba(179, 15, 35,0.08), 0 8px 18px rgba(18, 24, 36,0.06);
-    }
-
-    .category-icon svg { width: 25px; height: 25px; }
-
-    .category-card h3 {
-      margin: 18px 0 0;
-      font-size: 17px;
-      line-height: 1.55;
-      font-weight: 800;
-    }
-
-    .category-card .arrow {
-      position: absolute;
-      inset-inline-end: 18px;
-      top: 22px;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: #6b7482;
-      background: rgba(255, 255, 255,0.82);
-    }
-
-    .category-card .arrow svg { width: 15px; height: 15px; transition: transform 180ms ease; }
-    .category-card:hover .arrow svg { transform: translateX(-2px); }
-    html[dir="ltr"] .category-card:hover .arrow svg { transform: translateX(2px); }
-
-    .teachers-section[hidden] { display: none; }
-
-    .teachers-panel {
-      padding: 26px;
-      border-radius: 34px;
-    }
-
-    .teachers-toolbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
       margin-bottom: 22px;
     }
 
-    .teachers-context { min-width: 0; }
-
-    .teachers-context small {
-      display: block;
-      color: #B30F23;
-      margin-bottom: 5px;
+    h1 {
+      font-size: clamp(45px, 8vw, 85px);
+      line-height: 1.15;
       font-weight: 800;
     }
 
-    .teachers-context h2 {
-      margin: 0;
-      font-size: clamp(24px, 3vw, 36px);
-      line-height: 1.3;
+    .gradient {
+      color: var(--red);
     }
 
-    .vote-status {
-      flex: 0 0 auto;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255,0.86);
-      color: #4d5563;
-      font-size: 12px;
+    .hero p {
+      max-width: 720px;
+      margin: 25px auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 14px;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--red);
+      box-shadow: 0 12px 30px rgba(179,15,35,.25);
+    }
+
+    .btn-secondary {
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-head small {
+      color: var(--red);
+      font-weight: 800;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin: 8px 0;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .vote-info {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      padding: 18px 22px;
+      background: var(--light-red);
+      border: 1px solid #f0cbd0;
+      border-radius: 16px;
+      text-align: center;
+      color: var(--dark-red);
       font-weight: 700;
     }
 
     .teacher-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
     .teacher-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.04);
+      transition: .2s;
       position: relative;
-      padding: 22px;
-      min-height: 235px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(18, 24, 36,0.09);
-      box-shadow: 0 10px 30px rgba(18, 24, 36,0.06);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-      animation: riseIn 480ms cubic-bezier(.2,.8,.2,1) backwards;
+      overflow: hidden;
     }
 
     .teacher-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(179, 15, 35,0.16);
-      box-shadow: 0 18px 38px rgba(18, 24, 36,0.10);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #e9b8bf;
     }
 
-    .teacher-avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 20px;
+    .teacher-number {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 32px;
+      height: 32px;
       display: grid;
       place-items: center;
-      color: #B30F23;
-      background: linear-gradient(145deg, #eceff3, #ffffff);
-      box-shadow: inset 0 0 0 1px rgba(179, 15, 35,0.08), 0 10px 20px rgba(18, 24, 36,0.07);
+      background: var(--light-red);
+      color: var(--red);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 800;
     }
 
-    .teacher-avatar svg { width: 33px; height: 33px; }
+    .teacher-icon {
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: var(--light-red);
+      color: var(--red);
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
 
     .teacher-card h3 {
-      margin: 18px 0 5px;
-      font-size: 19px;
-      line-height: 1.45;
+      font-size: 20px;
+      margin-bottom: 5px;
     }
 
-    .teacher-card p {
-      margin: 0;
+    .subject {
       color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
+      font-size: 13px;
+      margin-bottom: 18px;
     }
 
-    .teacher-card .button {
+    .vote-btn {
       width: 100%;
-      min-height: 46px;
-      margin-top: auto;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border-radius: 14px;
+      border: 0;
+      background: var(--red);
+      color: white;
+      padding: 13px;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: .2s;
     }
 
-    .teacher-card .button[disabled] {
+    .vote-btn:hover {
+      background: var(--dark-red);
+    }
+
+    .vote-btn:disabled {
       cursor: not-allowed;
-      color: #6b7482;
-      background: #e6e9ee;
-      box-shadow: inset 0 0 0 1px rgba(18, 24, 36,0.07);
-      transform: none;
+      background: #ddd;
+      color: #777;
     }
 
-    .teacher-card.is-voted {
-      border-color: rgba(179, 15, 35,0.25);
-      background: linear-gradient(145deg, rgba(255, 255, 255,0.94), rgba(255,255,255,0.86));
+    .vote-btn.selected {
+      background: #218838;
+      color: white;
     }
 
-    .gratitude {
-      padding: 42px 0 98px;
+    .results {
+      background: #181818;
+      color: white;
     }
 
-    .gratitude-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 38px;
-      padding: 40px;
+    .results .section-head p {
+      color: #aaa;
+    }
+
+    .stats {
       display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 30px;
     }
 
-    .gratitude-card::before {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      inset-inline-end: -120px;
-      top: -120px;
-      background: radial-gradient(circle, rgba(179, 15, 35,0.16), transparent 67%);
-      pointer-events: none;
+    .stat {
+      background: #242424;
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
     }
 
-    .gratitude-copy { position: relative; z-index: 1; }
-    .gratitude-copy h2 { margin: 0; font-size: clamp(28px, 4vw, 46px); line-height: 1.3; }
-    .gratitude-copy p { max-width: 720px; margin: 14px 0 0; color: var(--muted); line-height: 1.9; }
+    .stat strong {
+      display: block;
+      font-size: 35px;
+      color: white;
+    }
 
-    .gratitude-icon {
-      position: relative;
-      z-index: 1;
-      width: 100px;
-      height: 100px;
-      border-radius: 30px;
+    .stat span {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .leaderboard {
+      max-width: 850px;
+      margin: auto;
       display: grid;
-      place-items: center;
-      color: #fff;
-      background: linear-gradient(145deg, #B30F23, #8A0D1C);
-      box-shadow: 0 20px 40px rgba(179, 15, 35,0.20), inset 0 1px 1px rgba(255,255,255,0.32);
-    }
-
-    .gratitude-icon svg { width: 52px; height: 52px; }
-
-    footer {
-      padding: 0 0 max(30px, env(safe-area-inset-bottom));
-      color: var(--muted);
-    }
-
-    .footer-card {
-      border-top: 1px solid rgba(18, 24, 36,0.10);
-      padding: 26px 0 10px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
       gap: 12px;
     }
 
-    .footer-brand svg { width: 22px; height: 22px; color: #B30F23; }
-    .footer-brand strong { display: block; color: var(--text); font-size: 13px; }
-    .footer-brand span { display: block; margin-top: 4px; font-size: 11px; line-height: 1.6; }
-
-    .credit {
-      text-align: end;
-      font-size: 11px;
-      line-height: 1.8;
+    .leader {
+      display: grid;
+      grid-template-columns: 55px 1fr auto;
+      align-items: center;
+      gap: 15px;
+      background: #242424;
+      padding: 16px 20px;
+      border-radius: 15px;
     }
 
-    .credit strong { color: var(--text); }
-
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
+    .rank {
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
-      padding: 18px;
-      background: rgba(18, 24, 36, 0.22);
-      backdrop-filter: blur(18px) saturate(120%);
-      -webkit-backdrop-filter: blur(18px) saturate(120%);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 180ms ease, visibility 180ms ease;
+      border-radius: 50%;
+      background: #333;
+      font-weight: 800;
     }
 
-    .modal-backdrop.is-open { opacity: 1; visibility: visible; }
+    .leader-name {
+      font-weight: 800;
+    }
+
+    .leader-subject {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .leader-votes {
+      font-weight: 800;
+      color: #e9b8bf;
+    }
+
+    .messages {
+      background: white;
+    }
+
+    .message-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .message {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      background: #fff;
+    }
+
+    .message-teacher {
+      color: var(--red);
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .message-text {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 35px 20px;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
 
     .modal {
-      width: min(100%, 560px);
-      max-height: min(88svh, 760px);
-      overflow: auto;
-      border-radius: 32px;
-      padding: 24px;
-      background: rgba(255,255,255,0.91);
-      border: 1px solid rgba(255,255,255,0.95);
-      box-shadow: 0 30px 100px rgba(18, 24, 36,0.28), inset 0 1px 0 rgba(255,255,255,0.9);
-      transform: translateY(18px) scale(0.97);
-      transition: transform 220ms cubic-bezier(.2,.8,.2,1);
-    }
-
-    .modal-backdrop.is-open .modal { transform: translateY(0) scale(1); }
-
-    .modal-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .modal-top small { color: #B30F23; font-weight: 800; }
-    .modal-top h2 { margin: 5px 0 0; font-size: 27px; line-height: 1.4; }
-
-    .modal-close {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      border: 0;
-      display: grid;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.6);
+      display: none;
       place-items: center;
-      color: var(--text);
-      background: #e9ecf0;
-      cursor: pointer;
-      flex: 0 0 auto;
+      z-index: 100;
+      padding: 20px;
     }
 
-    .modal-close svg { width: 20px; height: 20px; }
-
-    .selected-teacher {
-      margin-top: 20px;
-      padding: 16px;
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      background: linear-gradient(145deg, #eceff3, #f7f8fa);
-      box-shadow: inset 0 0 0 1px rgba(179, 15, 35,0.08);
+    .modal.show {
+      display: grid;
     }
 
-    .selected-teacher .teacher-avatar { width: 48px; height: 48px; border-radius: 15px; }
-    .selected-teacher .teacher-avatar svg { width: 25px; height: 25px; }
-    .selected-teacher strong { display: block; }
-    .selected-teacher span { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+    .modal-box {
+      width: min(520px, 100%);
+      background: white;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 25px 80px rgba(0,0,0,.25);
+    }
 
-    .field { margin-top: 20px; }
-    .field label { display: block; font-weight: 800; margin-bottom: 9px; font-size: 14px; }
+    .modal-box h2 {
+      margin-bottom: 5px;
+    }
+
+    .selected-name {
+      color: var(--red);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
 
     textarea {
       width: 100%;
-      min-height: 135px;
+      min-height: 130px;
       resize: vertical;
-      border: 1px solid rgba(18, 24, 36,0.13);
-      border-radius: 18px;
-      padding: 15px 16px;
-      color: var(--text);
-      background: rgba(255, 255, 255,0.92);
-      line-height: 1.75;
-      transition: border-color 160ms ease, box-shadow 160ms ease;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 15px;
+      font-family: inherit;
+      outline: none;
+      margin-bottom: 15px;
     }
 
     textarea:focus {
-      border-color: rgba(179, 15, 35,0.38);
-      box-shadow: 0 0 0 4px rgba(179, 15, 35,0.08);
-      outline: 0;
+      border-color: var(--red);
     }
 
-    .field-meta {
+    .modal-buttons {
       display: flex;
-      justify-content: space-between;
       gap: 10px;
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 11px;
     }
 
-    .field-error { color: var(--danger); min-height: 18px; margin-top: 7px; font-size: 12px; }
-
-    .modal-actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 18px;
+    .modal-buttons button {
+      flex: 1;
     }
 
-    .privacy-note {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1.7;
-    }
-
-    .privacy-note svg { width: 16px; height: 16px; margin-top: 2px; flex: 0 0 auto; }
-
-    .toast-stack {
-      position: fixed;
-      z-index: 130;
-      inset-inline: 16px;
-      bottom: max(18px, env(safe-area-inset-bottom));
-      display: grid;
-      place-items: center;
-      pointer-events: none;
+    .close {
+      background: #eee;
+      color: #333;
     }
 
     .toast {
-      max-width: min(520px, 100%);
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      padding: 13px 16px;
-      border-radius: 18px;
-      color: #fff;
-      background: rgba(18, 24, 36, 0.92);
-      box-shadow: 0 18px 50px rgba(18, 24, 36, 0.26);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      transform: translateY(20px);
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #181818;
+      color: white;
+      padding: 13px 20px;
+      border-radius: 12px;
       opacity: 0;
-      transition: transform 220ms ease, opacity 220ms ease;
-      font-size: 13px;
-      font-weight: 700;
+      transition: .3s;
+      z-index: 200;
+      text-align: center;
+      max-width: calc(100% - 30px);
     }
 
-    .toast.show { transform: translateY(0); opacity: 1; }
-    .toast svg { width: 20px; height: 20px; flex: 0 0 auto; }
-
-    @keyframes riseIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 620ms ease, transform 620ms cubic-bezier(.2,.8,.2,1);
-    }
-
-    .reveal.is-visible { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 980px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 34px; }
-      .hero { padding-top: 48px; }
-      .hero-copy { text-align: center; }
-      .eyebrow, .hero-lead { margin-inline: auto; }
-      .hero-actions { justify-content: center; }
-      .hero-visual { min-height: 410px; }
-      .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .teacher-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 720px) {
-      .container { width: min(calc(100% - 22px), var(--container)); }
-      .topbar-wrap { padding-top: max(8px, env(safe-area-inset-top)); }
-      .topbar { min-height: 64px; border-radius: 20px; padding: 8px 9px 8px 12px; }
-      .brand-mark { width: 40px; height: 40px; border-radius: 13px; }
-      .brand-mark svg { width: 22px; height: 22px; }
-      .brand-title { font-size: 12px; max-width: 190px; }
-      .brand-subtitle { display: none; }
-      .language-toggle { min-height: 40px; padding: 0 12px; font-size: 12px; }
-      .hero { min-height: auto; padding: 56px 0 44px; }
-      .hero h1 { font-size: clamp(40px, 12vw, 64px); }
-      .hero-lead { font-size: 16px; line-height: 1.9; }
-      .hero-actions .button { flex: 1 1 180px; }
-      .hero-visual { min-height: 350px; }
-      .tribute-card { min-height: 330px; padding: 28px; border-radius: 34px; }
-      .tribute-symbol { width: 76px; height: 76px; border-radius: 24px; }
-      .tribute-symbol svg { width: 40px; height: 40px; }
-      section.content-section { padding: 66px 0; }
-      .section-head { margin-bottom: 28px; }
-      .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
-      .category-card { min-height: 154px; padding: 18px; border-radius: 21px; }
-      .category-card h3 { font-size: 15px; }
-      .teachers-panel { padding: 16px; border-radius: 28px; }
-      .teachers-toolbar { align-items: flex-start; flex-direction: column; }
-      .vote-status { align-self: flex-start; }
-      .teacher-grid { grid-template-columns: 1fr; }
-      .teacher-card { min-height: 220px; }
-      .gratitude-card { grid-template-columns: 1fr; padding: 30px 24px; border-radius: 30px; }
-      .gratitude-icon { width: 80px; height: 80px; border-radius: 24px; }
-      .footer-card { grid-template-columns: 1fr; }
-      .credit { text-align: start; }
-      .modal { padding: 20px; border-radius: 28px; }
-    }
-
-    @media (max-width: 430px) {
-      .category-grid { grid-template-columns: 1fr; }
-      .category-card { min-height: 128px; }
-      .modal-actions { grid-template-columns: 1fr; }
-      .hero-actions { display: grid; grid-template-columns: 1fr; }
-      .hero-actions .button { width: 100%; }
-    }
-
-
-    /* Bahrain flag strip: red field with white serrated hoist */
-    .flag-strip {
-      height: 14px;
-      background:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 20' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' d='M0 0h12l8 2-8 2 8 2-8 2 8 2-8 2 8 2-8 2 8 2-8 2H0z'/%3E%3C/svg%3E") left center / 60px 100% no-repeat,
-        #B30F23;
-      position: relative;
-      z-index: 50;
-    }
-    html[dir="rtl"] .flag-strip { transform: scaleX(-1); }
-
-    /* Hall of Fame */
-    .hof-sub { margin: 34px 0 14px; font-size: 20px; color: var(--primary); font-weight: 800; }
-    .hof-podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-    .hof-card {
-      position: relative; padding: 24px; border-radius: 26px;
-      background: rgba(255,255,255,0.86); border: 1px solid rgba(206,17,38,0.12);
-      box-shadow: 0 12px 34px rgba(70,20,30,0.08);
-      display: flex; flex-direction: column; gap: 6px;
-      animation: riseIn 520ms cubic-bezier(.2,.8,.2,1) backwards;
-    }
-    .hof-card.rank-1 { background: linear-gradient(145deg, #B30F23, #5E0A15); color: #fff; border-color: transparent; box-shadow: 0 22px 50px rgba(206,17,38,0.28); }
-    .hof-card.rank-1 .hof-cat, .hof-card.rank-1 .hof-votes { color: rgba(255,255,255,0.88); }
-    .hof-rank {
-      width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
-      font-weight: 800; font-size: 20px; color: #B30F23; background: #fff;
-      box-shadow: inset 0 0 0 2px #B30F23; margin-bottom: 10px;
-    }
-    .hof-card.rank-1 .hof-rank { box-shadow: none; }
-    .hof-name { margin: 0; font-size: 21px; line-height: 1.4; }
-    .hof-cat { margin: 0; color: var(--muted); font-size: 13px; }
-    .hof-votes { margin-top: 8px; font-weight: 800; font-size: 14px; color: var(--primary); }
-    .hof-cats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-    .hof-cat-card {
-      padding: 18px; border-radius: 20px; background: rgba(255,255,255,0.8);
-      border: 1px solid rgba(206,17,38,0.10); display: flex; align-items: center; gap: 12px;
-    }
-    .hof-cat-card .category-icon { flex: 0 0 auto; }
-    .hof-cat-card strong { display: block; font-size: 15px; }
-    .hof-cat-card small { color: var(--muted); }
-    .hof-empty { padding: 32px; border-radius: 26px; text-align: center; color: var(--muted); line-height: 1.9; }
-    .hof-note { margin: 22px auto 0; max-width: 760px; text-align: center; color: var(--muted); font-size: 12px; line-height: 1.8; }
-    @media (max-width: 980px) { .hof-cats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 720px) { .hof-podium, .hof-cats { grid-template-columns: 1fr; } }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
+    @media (max-width: 850px) {
+      .teacher-grid,
+      .message-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-      .reveal { opacity: 1; transform: none; }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        min-height: 65px;
+      }
+
+      .school-name {
+        font-size: 11px;
+      }
+
+      .school-sub {
+        display: none;
+      }
+
+      .hero {
+        min-height: 75vh;
+        padding: 55px 0;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .teacher-grid,
+      .message-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .leader {
+        grid-template-columns: 45px 1fr;
+      }
+
+      .leader-votes {
+        grid-column: 2;
+      }
+
+      .modal-box {
+        padding: 22px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden">
-    <defs>
-      <symbol id="i-school" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-5h6v5M8 11h.01M12 11h.01M16 11h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7L12 3Zm6.5 11 .9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9.9-2.1ZM5 14l.7 1.7 1.8.8-1.8.7L5 19l-.8-1.8-1.7-.7 1.7-.8L5 14Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-      <symbol id="i-award" viewBox="0 0 24 24"><path d="M12 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-3 9-1 9 4-2 4 2-1-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-      <symbol id="i-lock" viewBox="0 0 24 24"><path d="M7 10V8a5 5 0 0 1 10 0v2M6 10h12v10H6V10Zm6 4v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 5.8a5.3 5.3 0 0 0-7.5 0L12 7.1l-1.3-1.3a5.3 5.3 0 0 0-7.5 7.5L12 22l8.8-8.7a5.3 5.3 0 0 0 0-7.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
-      <symbol id="i-person" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 8a7 7 0 0 0-14 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H11v17H7.5A3.5 3.5 0 0 0 4 22V5.5Zm16 0A3.5 3.5 0 0 0 16.5 2H13v17h3.5A3.5 3.5 0 0 1 20 22V5.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-      <symbol id="i-mosque" viewBox="0 0 24 24"><path d="M3 21h18M5 21v-8h14v8M8 13V9.5c0-2.2 1.8-4 4-4s4 1.8 4 4V13M10 5.8 12 3l2 2.8M3 13h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-language" viewBox="0 0 24 24"><path d="M4 5h8M8 3v2m0 0c0 4-2 7-5 9m5-5c1.2 2.4 2.7 4.1 4.5 5.2M14 21l4-10 4 10m-6.5-4h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-math" viewBox="0 0 24 24"><path d="M4 7h7M7.5 3.5v7M14 5l6 6m0-6-6 6M4 17h7M14 17h6M17 14v.01M17 20v.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-      <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3M8 15h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-computer" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8M12 17v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
-      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 12h18M12 3c2.5 2.4 3.7 5.4 3.7 9S14.5 18.6 12 21c-2.5-2.4-3.7-5.4-3.7-9S9.5 5.4 12 3Z" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
-      <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0 0 18h1.2a2.2 2.2 0 0 0 0-4.4h-.7a1.8 1.8 0 0 1 0-3.6H16a5 5 0 0 0 5-5c0-2.8-3.9-5-9-5Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7 9h.01M10 6h.01M15 6.5h.01M18 9h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
-      <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m12 7 3 2.2-1.2 3.5H10.2L9 9.2 12 7Zm-8.5 7 4-1 2.7 3.4-2 3.2M20.5 14l-4-1-2.7 3.4 2 3.2M7.5 5.5 9 9.2M16.5 5.5 15 9.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
-      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.3 8.5-8 10-4.7-1.5-8-5-8-10V6l8-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.8 12 2.1 2.1 4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Zm0 2H4v1a4 4 0 0 0 4 4m8-5h4v1a4 4 0 0 1-4 4M12 13v4m-4 3h8m-6-3h4v3h-4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-      <symbol id="i-send" viewBox="0 0 24 24"><path d="m3 4 18 8-18 8 4-8-4-8Zm4 8h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    </defs>
-  </svg>
 
-  <noscript><p style="padding:24px;text-align:center;font-family:Arial,sans-serif">يتطلب هذا الموقع تفعيل JavaScript · This site requires JavaScript.</p></noscript>
-  <div class="page-shell">
-    <div class="flag-strip" aria-hidden="true"></div>
-    <div class="ambient" aria-hidden="true">
-      <span class="orb one"></span>
-      <span class="orb two"></span>
-      <span class="orb three"></span>
-    </div>
+  <div class="flag"></div>
 
-    <div class="topbar-wrap">
+  <header>
+    <nav class="nav">
+      <div>
+        <div class="school-name">
+          مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين
+        </div>
+        <div class="school-sub">
+          يوم المعلم 2026
+        </div>
+      </div>
+
+      <button class="lang" onclick="toggleLanguage()">
+        English
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
       <div class="container">
-        <header class="topbar glass" aria-label="التنقل الرئيسي">
-          <div class="brand">
-            <div class="brand-mark" aria-hidden="true"><svg><use href="#i-school"></use></svg></div>
-            <div class="brand-copy">
-              <p class="brand-title" data-i18n="schoolName">مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين</p>
-              <p class="brand-subtitle" data-i18n="schoolTagline">يوم المعلم 2026</p>
-            </div>
-          </div>
-          <div class="top-actions">
-            <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch to English">English</button>
-          </div>
-        </header>
-      </div>
-    </div>
+        <div class="hero-content">
 
-    <main>
-      <section class="hero" aria-labelledby="heroTitle">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="eyebrow">
-              <svg aria-hidden="true"><use href="#i-spark"></use></svg>
-              <span data-i18n="eyebrow">هدية رقمية بمناسبة يوم المعلم</span>
-            </div>
-            <h1 id="heroTitle"><span data-i18n="heroLine1">لمن يصنعون</span> <span class="gradient-text" data-i18n="heroLine2">الفرق كل يوم</span></h1>
-            <p class="hero-lead" data-i18n="heroLead">مساحة تقدير من طلاب المدرسة لمعلميهم. اختر الفئة، صوّت للمعلم الذي ترك أثرًا جميلًا، واكتب له كلمة تليق بعطائه.</p>
-            <div class="hero-actions">
-              <button class="button primary" id="startVote" type="button">
-                <svg aria-hidden="true"><use href="#i-award"></use></svg>
-                <span data-i18n="startVote">ابدأ التصويت</span>
-              </button>
-              <button class="button secondary" id="viewTribute" type="button">
-                <svg aria-hidden="true"><use href="#i-heart"></use></svg>
-                <span data-i18n="readMessage">كلمة للمعلمين</span>
-              </button>
-            </div>
+          <div class="badge">
+            🎓 يوم المعلم 2026
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
-            <div class="hero-orbit"></div>
-            <article class="tribute-card glass">
-              <div>
-                <div class="tribute-symbol"><svg><use href="#i-award"></use></svg></div>
-                <p class="tribute-kicker" data-i18n="tributeKicker">5 أكتوبر · يوم المعلم</p>
-                <h2 class="tribute-title" data-i18n="tributeTitle">شكرًا لأنكم تجعلون للمعرفة أثرًا.</h2>
-                <p class="tribute-note" data-i18n="tributeNote">إهداء من طلاب مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين.</p>
-              </div>
-              <div class="mini-badge-row">
-                <span class="chip" data-i18n="chipRespect">تقدير</span>
-                <span class="chip" data-i18n="chipImpact">أثر</span>
-                <span class="chip" data-i18n="chipThanks">امتنان</span>
-              </div>
-            </article>
+          <h1>
+            نحتفل بمن يصنعون
+            <span class="gradient">فرقًا كل يوم</span>
+          </h1>
+
+          <p>
+            اختر المعلم الذي ترى أنه يستحق لقب
+            <strong>أفضل معلم</strong>
+            وشاركنا بكلمة تقدير بسيطة.
+          </p>
+
+          <div class="buttons">
+            <button class="btn btn-primary" onclick="scrollToTeachers()">
+              ابدأ التصويت
+            </button>
+
+            <button class="btn btn-secondary" onclick="scrollToMessages()">
+              كلمات التقدير
+            </button>
           </div>
-        </div>
-      </section>
 
-      <section class="content-section" id="categories" aria-labelledby="categoriesTitle">
-        <div class="container">
-          <header class="section-head reveal">
-            <div class="section-index"><svg aria-hidden="true"><use href="#i-award"></use></svg><span data-i18n="step1">الخطوة الأولى</span></div>
-            <h2 id="categoriesTitle" data-i18n="categoriesTitle">اختر فئة التكريم</h2>
-            <p data-i18n="categoriesText">اختر المادة أو القسم الذي تريد أن تبدأ منه. يمكنك تسجيل تصويت واحد لكل فئة من هذا الجهاز.</p>
-          </header>
-          <div class="category-grid" id="categoryGrid"></div>
-        </div>
-      </section>
-
-      <section class="content-section teachers-section" id="teachers" aria-labelledby="teachersTitle" hidden>
-        <div class="container">
-          <div class="teachers-panel glass reveal">
-            <div class="teachers-toolbar">
-              <div class="teachers-context">
-                <small data-i18n="step2">الخطوة الثانية</small>
-                <h2 id="teachersTitle" tabindex="-1">اختر المعلم</h2>
-              </div>
-              <div class="vote-status" id="voteStatus" aria-live="polite"></div>
-            </div>
-            <div class="teacher-grid" id="teacherGrid"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section" id="hallOfFame" aria-labelledby="hofTitle">
-        <div class="container">
-          <header class="section-head reveal">
-            <div class="section-index"><svg aria-hidden="true"><use href="#i-trophy"></use></svg><span data-i18n="hofEyebrow">لوحة الشرف</span></div>
-            <h2 id="hofTitle" data-i18n="hofTitle">المعلمون الأكثر تصويتًا</h2>
-            <p data-i18n="hofText">أكثر المعلمين حصولًا على أصوات الطلاب وتقديرهم.</p>
-          </header>
-          <div class="hof-empty glass" id="hofEmpty" data-i18n="hofEmpty">لا توجد أصوات بعد. كن أول من يصوّت!</div>
-          <div id="hofBody" hidden>
-            <h3 class="hof-sub" data-i18n="hofTop">الأعلى تصويتًا</h3>
-            <div class="hof-podium" id="hofPodium"></div>
-            <h3 class="hof-sub" data-i18n="hofByCategory">الأول في كل فئة</h3>
-            <div class="hof-cats" id="hofCats"></div>
-          </div>
-          <p class="hof-note" data-i18n="hofNote">الترتيب يعتمد على جميع الأصوات المسجّلة في قاعدة البيانات.</p>
-        </div>
-      </section>
-
-      <section class="gratitude" id="tribute" aria-labelledby="gratitudeTitle">
-        <div class="container">
-          <article class="gratitude-card glass reveal">
-            <div class="gratitude-copy">
-              <div class="section-index"><svg aria-hidden="true"><use href="#i-heart"></use></svg><span data-i18n="gratitudeEyebrow">رسالة تقدير</span></div>
-              <h2 id="gratitudeTitle" data-i18n="gratitudeTitle">إلى كل معلم: أثرُك يبقى أبعد من حدود الدرس.</h2>
-              <p data-i18n="gratitudeText">شكرًا لكل كلمة صنعت ثقة، ولكل موقف زرع قيمة، ولكل جهد جعل المدرسة مكانًا أفضل للتعلم والنمو. في يوم المعلم نحتفي بكم وبالأثر الذي يرافق طلابكم طويلًا.</p>
-            </div>
-            <div class="gratitude-icon" aria-hidden="true"><svg><use href="#i-heart"></use></svg></div>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container footer-card">
-        <div class="footer-brand">
-          <svg aria-hidden="true"><use href="#i-school"></use></svg>
-          <div>
-            <strong data-i18n="schoolName">مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين</strong>
-            <span data-i18n="footerMessage">يوم المعلم 2026 · شكرًا لكل معلم يصنع فرقًا.</span>
-          </div>
-        </div>
-        <div class="credit">
-          <strong data-i18n="preparedBy">إعداد فريق تكنو</strong><br>
-          <span data-i18n="studentCredit">الطالب عبد الرحمن أحمد الجبوري · الصف الثاني · الفرقة 2</span>
         </div>
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <div class="modal-backdrop" id="voteModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-    <div class="modal" role="document">
-      <div class="modal-top">
-        <div>
-          <small data-i18n="voteFormKicker">كلمة تقدير</small>
-          <h2 id="modalTitle" data-i18n="voteFormTitle">أكمل تصويتك</h2>
+    <!-- TEACHERS -->
+    <section id="teachers">
+      <div class="container">
+
+        <div class="section-head">
+          <small>الخطوة الأولى</small>
+
+          <h2>
+            اختر أفضل معلم
+          </h2>
+
+          <p>
+            لديك تصويت واحد فقط. اختر المعلم الذي ترى أنه يستحق لقب أفضل معلم.
+          </p>
         </div>
-        <button class="modal-close" id="closeModal" type="button" aria-label="إغلاق">
-          <svg aria-hidden="true"><use href="#i-close"></use></svg>
+
+        <div class="vote-info">
+          🏆 تصويت واحد فقط لكل جهاز
+        </div>
+
+        <div class="teacher-grid" id="teacherGrid"></div>
+
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results" id="results">
+      <div class="container">
+
+        <div class="section-head">
+          <small>النتائج</small>
+
+          <h2>
+            لوحة الشرف
+          </h2>
+
+          <p>
+            نتائج التصويت الحالية
+          </p>
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong id="totalVotes">0</strong>
+            <span>إجمالي الأصوات</span>
+          </div>
+
+          <div class="stat">
+            <strong id="teacherCount">9</strong>
+            <span>عدد المعلمين</span>
+          </div>
+
+          <div class="stat">
+            <strong id="leadingVotes">0</strong>
+            <span>أصوات المتصدر</span>
+          </div>
+
+        </div>
+
+        <div class="leaderboard" id="leaderboard">
+          <div class="empty">
+            لا توجد أصوات بعد.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MESSAGES -->
+    <section class="messages" id="messages">
+      <div class="container">
+
+        <div class="section-head">
+          <small>رسائل الطلاب</small>
+
+          <h2>
+            كلمات التقدير
+          </h2>
+
+          <p>
+            رسائل كتبها الطلاب لمعلميهم.
+          </p>
+        </div>
+
+        <div class="message-grid" id="messageGrid">
+          <div class="empty">
+            لا توجد رسائل بعد.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>يوم المعلم 2026</strong>
+    <br>
+    مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين
+    <br><br>
+    إعداد فريق تكنو
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="voteModal">
+
+    <div class="modal-box">
+
+      <h2>
+        تأكيد التصويت
+      </h2>
+
+      <div class="selected-name" id="selectedName"></div>
+
+      <label>
+        لماذا اخترت هذا المعلم؟
+      </label>
+
+      <textarea
+        id="reason"
+        maxlength="300"
+        placeholder="اكتب كلمة تقدير قصيرة..."
+      ></textarea>
+
+      <div class="modal-buttons">
+
+        <button
+          class="btn btn-primary"
+          onclick="confirmVote()"
+        >
+          تأكيد التصويت
         </button>
+
+        <button
+          class="btn close"
+          onclick="closeModal()"
+        >
+          إلغاء
+        </button>
+
       </div>
 
-      <div class="selected-teacher">
-        <div class="teacher-avatar" aria-hidden="true"><svg><use href="#i-person"></use></svg></div>
-        <div>
-          <strong id="selectedTeacherName"></strong>
-          <span id="selectedCategoryName"></span>
-        </div>
-      </div>
-
-      <form id="voteForm" novalidate>
-        <div class="field">
-          <label for="reason" data-i18n="reasonLabel">لماذا اخترت هذا المعلم؟</label>
-          <textarea id="reason" name="reason" maxlength="300" minlength="10" required data-i18n-placeholder="reasonPlaceholder" placeholder="اكتب كلمة قصيرة وصادقة عن أثره فيك..."></textarea>
-          <div class="field-meta">
-            <span data-i18n="reasonHint">10 أحرف على الأقل</span>
-            <span id="charCount">0 / 300</span>
-          </div>
-          <div class="field-error" id="reasonError" role="alert"></div>
-        </div>
-
-        <div class="modal-actions">
-          <button class="button primary" type="submit">
-            <svg aria-hidden="true"><use href="#i-send"></use></svg>
-            <span data-i18n="confirmVote">تأكيد التصويت</span>
-          </button>
-          <button class="button secondary" id="cancelVote" type="button" data-i18n="cancel">إلغاء</button>
-        </div>
-
-        <div class="privacy-note">
-          <svg aria-hidden="true"><use href="#i-lock"></use></svg>
-          <span data-i18n="privacyNote">يُحفظ التصويت في قاعدة بيانات آمنة ليظهر في لوحة الشرف لجميع الزوار. لا يتم إرسال معلومات شخصية.</span>
-        </div>
-      </form>
     </div>
+
   </div>
 
-  <div class="toast-stack" aria-live="polite" aria-atomic="true">
-    <div class="toast" id="toast"><svg aria-hidden="true"><use href="#i-check"></use></svg><span id="toastText"></span></div>
-  </div>
+  <div class="toast" id="toast"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    "use strict";
 
-    const STORAGE_KEY = "east-riffa-teachers-day-2026-votes-v1";
-    const VOTER_ID_KEY = "east-riffa-teachers-day-2026-voter-id-v1";
-    const SUPABASE_URL = "https://vsdskzgvsgcprmiijrdz.supabase.co";
-    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_q8ss0PwIYCnoFMPoVmcNug_6lkAli5_";
-    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+    /* =========================================
+       SUPABASE
+    ========================================= */
 
-    const translations = {
-      ar: {
-        schoolName: "مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين",
-        schoolTagline: "يوم المعلم 2026",
-        pageTitle: "يوم المعلم 2026 | مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين",
-        metaDescription: "احتفالية يوم المعلم 2026 في مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين — مساحة تقدير وتصويت للمعلمين.",
-        eyebrow: "هدية رقمية بمناسبة يوم المعلم",
-        heroLine1: "لمن يصنعون",
-        heroLine2: "الفرق كل يوم",
-        heroLead: "مساحة تقدير من طلاب المدرسة لمعلميهم. اختر الفئة، صوّت للمعلم الذي ترك أثرًا جميلًا، واكتب له كلمة تليق بعطائه.",
-        startVote: "ابدأ التصويت",
-        readMessage: "كلمة للمعلمين",
-        tributeKicker: "5 أكتوبر · يوم المعلم",
-        tributeTitle: "شكرًا لأنكم تجعلون للمعرفة أثرًا.",
-        tributeNote: "إهداء من طلاب مدرسة الرفاع الشرقي الابتدائية الإعدادية للبنين.",
-        chipRespect: "تقدير",
-        chipImpact: "أثر",
-        chipThanks: "امتنان",
-        step1: "الخطوة الأولى",
-        categoriesTitle: "اختر فئة التكريم",
-        categoriesText: "اختر المادة أو القسم الذي تريد أن تبدأ منه. يمكنك تسجيل تصويت واحد لكل فئة من هذا الجهاز.",
-        step2: "الخطوة الثانية",
-        chooseTeacher: "اختر المعلم",
-        oneVotePerCategory: "تصويت واحد لكل فئة",
-        votedInCategory: "تم تسجيل تصويت لهذه الفئة",
-        vote: "صوّت لهذا المعلم",
-        voted: "تم التصويت",
-        categoryLabel: "فئة",
-        gratitudeEyebrow: "رسالة تقدير",
-        gratitudeTitle: "إلى كل معلم: أثرُك يبقى أبعد من حدود الدرس.",
-        gratitudeText: "شكرًا لكل كلمة صنعت ثقة، ولكل موقف زرع قيمة، ولكل جهد جعل المدرسة مكانًا أفضل للتعلم والنمو. في يوم المعلم نحتفي بكم وبالأثر الذي يرافق طلابكم طويلًا.",
-        footerMessage: "يوم المعلم 2026 · شكرًا لكل معلم يصنع فرقًا.",
-        preparedBy: "إعداد فريق تكنو",
-        studentCredit: "الطالب عبد الرحمن أحمد الجبوري · الصف الثاني · الفرقة 2",
-        voteFormKicker: "كلمة تقدير",
-        voteFormTitle: "أكمل تصويتك",
-        reasonLabel: "لماذا اخترت هذا المعلم؟",
-        reasonPlaceholder: "اكتب كلمة قصيرة وصادقة عن أثره فيك...",
-        reasonHint: "10 أحرف على الأقل",
-        confirmVote: "تأكيد التصويت",
-        cancel: "إلغاء",
-        privacyNote: "يُحفظ التصويت في قاعدة بيانات آمنة ليظهر في لوحة الشرف لجميع الزوار. لا يتم إرسال معلومات شخصية.",
-        reasonTooShort: "اكتب سببًا من 10 أحرف على الأقل قبل تأكيد التصويت.",
-        voteSaved: "تم تسجيل تصويتك وكلمة التقدير بنجاح وحفظهما في قاعدة البيانات.",
-        duplicateVote: "سبق تسجيل تصويت من هذا الجهاز في هذه الفئة.",
-        storageError: "تعذر حفظ التصويت. تحقق من اتصال الإنترنت وحاول مرة أخرى.",
-        languageAria: "Switch to English",
-        closeAria: "إغلاق",
-        teacherRole: "معلم المدرسة",
-        hofEyebrow: "لوحة الشرف",
-        hofTitle: "المعلمون الأكثر تصويتًا",
-        hofText: "أكثر المعلمين حصولًا على أصوات الطلاب وتقديرهم.",
-        hofEmpty: "لا توجد أصوات بعد. كن أول من يصوّت!",
-        hofTop: "الأعلى تصويتًا",
-        hofByCategory: "الأول في كل فئة",
-        hofNote: "الترتيب يعتمد على جميع الأصوات المسجّلة في قاعدة البيانات.",
-        votesWord: "صوت"
+    const SUPABASE_URL =
+      "https://vsdskzgvsgcprmiijrdz.supabase.co";
+
+    const SUPABASE_KEY =
+      "sb_publishable_q8ss0PwIYCnoFMPoVmcNug_6lkAli5_";
+
+
+    /* =========================================
+       TEACHERS
+    ========================================= */
+
+    const teachers = [
+
+      {
+        id: "teacher-ahmed-farid",
+        name: "الحسيني أحمد فريد",
+        subject: "عربي"
       },
-      en: {
-        schoolName: "East Riffa Primary Intermediate Boys School",
-        schoolTagline: "Teachers' Day 2026",
-        pageTitle: "Teachers' Day 2026 | East Riffa Primary Intermediate Boys School",
-        metaDescription: "Teachers' Day 2026 celebration at East Riffa Primary Intermediate Boys School — a space to appreciate and vote for teachers.",
-        eyebrow: "A digital gift for Teachers' Day",
-        heroLine1: "For those who make",
-        heroLine2: "a difference every day",
-        heroLead: "A space for students to appreciate their teachers. Choose a category, vote for the teacher who made a meaningful impact, and leave a message worthy of their effort.",
-        startVote: "Start Voting",
-        readMessage: "Message to Teachers",
-        tributeKicker: "5 October · Teachers' Day",
-        tributeTitle: "Thank you for giving knowledge a lasting impact.",
-        tributeNote: "A gift from the students of East Riffa Primary Intermediate Boys School.",
-        chipRespect: "Respect",
-        chipImpact: "Impact",
-        chipThanks: "Gratitude",
-        step1: "Step One",
-        categoriesTitle: "Choose an Appreciation Category",
-        categoriesText: "Choose a subject or school department to begin. One vote can be recorded per category on this device.",
-        step2: "Step Two",
-        chooseTeacher: "Choose a Teacher",
-        oneVotePerCategory: "One vote per category",
-        votedInCategory: "A vote is already recorded for this category",
-        vote: "Vote for this teacher",
-        voted: "Voted",
-        categoryLabel: "Category",
-        gratitudeEyebrow: "A Message of Appreciation",
-        gratitudeTitle: "To every teacher: your impact reaches beyond the lesson.",
-        gratitudeText: "Thank you for every word that built confidence, every moment that taught a value, and every effort that made school a better place to learn and grow. On Teachers' Day, we celebrate you and the impact that stays with your students.",
-        footerMessage: "Teachers' Day 2026 · Thank you to every teacher who makes a difference.",
-        preparedBy: "Prepared by Techno Team",
-        studentCredit: "Student Abdulrahman Ahmed Al-Jubouri · Grade 2 · Section 2",
-        voteFormKicker: "A Note of Appreciation",
-        voteFormTitle: "Complete Your Vote",
-        reasonLabel: "Why did you choose this teacher?",
-        reasonPlaceholder: "Write a short, sincere message about their impact on you...",
-        reasonHint: "At least 10 characters",
-        confirmVote: "Confirm Vote",
-        cancel: "Cancel",
-        privacyNote: "Your vote is stored in the shared database so the Hall of Fame can show results to all visitors. No personal information is sent.",
-        reasonTooShort: "Please write at least 10 characters before confirming your vote.",
-        voteSaved: "Your vote and appreciation message were saved successfully to the shared database.",
-        duplicateVote: "A vote from this device has already been recorded in this category.",
-        storageError: "The vote could not be saved. Please check your internet connection and try again.",
-        languageAria: "التبديل إلى العربية",
-        closeAria: "Close",
-        teacherRole: "School teacher",
-        hofEyebrow: "Hall of Fame",
-        hofTitle: "Most Voted Teachers",
-        hofText: "The teachers who received the most votes and appreciation from students.",
-        hofEmpty: "No votes yet. Be the first to vote!",
-        hofTop: "Top Voted",
-        hofByCategory: "Leader in Each Category",
-        hofNote: "The ranking reflects all votes recorded in the shared database.",
-        votesWord: "votes"
-      }
-    };
 
-    const categories = [
-      { id: "islamic", icon: "i-mosque", ar: "التربية الإسلامية", en: "Islamic Education" },
-      { id: "arabic", icon: "i-book", ar: "اللغة العربية", en: "Arabic Language" },
-      { id: "english", icon: "i-language", ar: "اللغة الإنجليزية", en: "English Language" },
-      { id: "math", icon: "i-math", ar: "الرياضيات", en: "Mathematics" },
-      { id: "science", icon: "i-flask", ar: "العلوم", en: "Science" },
-      { id: "computer", icon: "i-computer", ar: "الحاسوب", en: "Computer Science" },
-      { id: "social", icon: "i-globe", ar: "الدراسات الاجتماعية", en: "Social Studies" },
-      { id: "art", icon: "i-palette", ar: "الفنون", en: "Art" },
-      { id: "pe", icon: "i-ball", ar: "التربية الرياضية", en: "Physical Education" },
-      { id: "moderators", icon: "i-shield", ar: "المشرفون", en: "School Supervisors" },
-      { id: "administration", icon: "i-school", ar: "الإدارة المدرسية", en: "School Administration" }
+      {
+        id: "teacher-khalil",
+        name: "أ/ خليل محمد المقابلة",
+        subject: "إنجليزي"
+      },
+
+      {
+        id: "teacher-mohammed-zaki",
+        name: "محمد زكي",
+        subject: "علوم"
+      },
+
+      {
+        id: "teacher-mahmoud-abdulhussein",
+        name: "محمود محمد عبد الحسين",
+        subject: "رياضيات"
+      },
+
+      {
+        id: "teacher-almoez",
+        name: "المعز العراش",
+        subject: "فرنسي"
+      },
+
+      {
+        id: "teacher-ahmed-yousef",
+        name: "أ/ أحمد يوسف بوصالح",
+        subject: "رياضة"
+      },
+
+      {
+        id: "teacher-abdullah",
+        name: "عبدالله المناعي",
+        subject: "اجتماعيات، مواطنة"
+      },
+
+      {
+        id: "teacher-mahmoud-nuaimi",
+        name: "محمود النعيمي",
+        subject: "تربية إسلامية، تلاوة"
+      },
+
+      {
+        id: "teacher-mohammed-mustaki",
+        name: "محمد عبد الرحمن المستكي",
+        subject: "حاسوب"
+      }
+
     ];
 
-    const teachers = {
-      islamic: [
-        { id: "islamic-ahmed", ar: "الأستاذ أحمد", en: "Mr. Ahmed" },
-        { id: "islamic-mohammed", ar: "الأستاذ محمد", en: "Mr. Mohammed" }
-      ],
-      arabic: [
-        { id: "arabic-ali", ar: "الأستاذ علي", en: "Mr. Ali" },
-        { id: "arabic-fatima", ar: "الأستاذة فاطمة", en: "Ms. Fatima" }
-      ],
-      english: [
-        { id: "english-sara", ar: "الأستاذة سارة", en: "Ms. Sara" },
-        { id: "english-john", ar: "الأستاذ جون", en: "Mr. John" }
-      ],
-      math: [
-        { id: "math-khalid", ar: "الأستاذ خالد", en: "Mr. Khalid" },
-        { id: "math-noora", ar: "الأستاذة نورة", en: "Ms. Noora" }
-      ],
-      science: [
-        { id: "science-yousef", ar: "الأستاذ يوسف", en: "Mr. Yousef" },
-        { id: "science-maryam", ar: "الأستاذة مريم", en: "Ms. Maryam" }
-      ],
-      computer: [
-        { id: "computer-omar", ar: "الأستاذ عمر", en: "Mr. Omar" },
-        { id: "computer-khalid", ar: "الأستاذ خالد", en: "Mr. Khalid" }
-      ],
-      social: [
-        { id: "social-maryam", ar: "الأستاذة مريم", en: "Ms. Maryam" },
-        { id: "social-abdullah", ar: "الأستاذ عبدالله", en: "Mr. Abdullah" }
-      ],
-      art: [
-        { id: "art-layla", ar: "الأستاذة ليلى", en: "Ms. Layla" },
-        { id: "art-noor", ar: "الأستاذة نور", en: "Ms. Noor" }
-      ],
-      pe: [
-        { id: "pe-hassan", ar: "الأستاذ حسن", en: "Mr. Hassan" },
-        { id: "pe-ahmed", ar: "الأستاذ أحمد", en: "Mr. Ahmed" }
-      ],
-      moderators: [
-        { id: "mod-ahmed", ar: "المشرف أحمد", en: "Supervisor Ahmed" },
-        { id: "mod-sara", ar: "المشرفة سارة", en: "Supervisor Sara" }
-      ],
-      administration: [
-        { id: "admin-principal", ar: "مدير المدرسة", en: "School Principal" },
-        { id: "admin-deputy", ar: "نائب المدير", en: "Deputy Principal" }
-      ]
-    };
 
-    const state = {
-      lang: "ar",
-      activeCategory: null,
-      selectedTeacher: null,
-      previousFocus: null
-    };
+    /* =========================================
+       STATE
+    ========================================= */
 
-    const $ = (selector, root = document) => root.querySelector(selector);
-    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+    let selectedTeacher = null;
 
-    const categoryGrid = $("#categoryGrid");
-    const teachersSection = $("#teachers");
-    const teacherGrid = $("#teacherGrid");
-    const teachersTitle = $("#teachersTitle");
-    const voteStatus = $("#voteStatus");
-    const languageToggle = $("#languageToggle");
-    const voteModal = $("#voteModal");
-    const closeModalButton = $("#closeModal");
-    const cancelVoteButton = $("#cancelVote");
-    const voteForm = $("#voteForm");
-    const reasonInput = $("#reason");
-    const reasonError = $("#reasonError");
-    const charCount = $("#charCount");
-    const selectedTeacherName = $("#selectedTeacherName");
-    const selectedCategoryName = $("#selectedCategoryName");
-    const toast = $("#toast");
-    const toastText = $("#toastText");
+    const VOTE_KEY =
+      "teachers-day-2026-one-vote";
 
-    function makeIcon(id, className = "") {
-      const ns = "http://www.w3.org/2000/svg";
-      const svg = document.createElementNS(ns, "svg");
-      const use = document.createElementNS(ns, "use");
-      svg.setAttribute("aria-hidden", "true");
-      if (className) svg.setAttribute("class", className);
-      use.setAttribute("href", `#${id}`);
-      svg.appendChild(use);
-      return svg;
+
+    /* =========================================
+       CHECK LOCAL VOTE
+    ========================================= */
+
+    function hasVoted() {
+      return localStorage.getItem(VOTE_KEY) !== null;
     }
 
-    function getCategory(id) {
-      return categories.find(category => category.id === id) || null;
-    }
 
-    function getVotes() {
+    function getLocalVote() {
       try {
-        const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-        return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+        return JSON.parse(
+          localStorage.getItem(VOTE_KEY)
+        );
       } catch {
-        return {};
+        return null;
       }
     }
 
-    function saveVotes(votes) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(votes));
-    }
 
-    function getVoterId() {
-      let voterId = localStorage.getItem(VOTER_ID_KEY);
-      if (!voterId) {
-        voterId = (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`);
-        localStorage.setItem(VOTER_ID_KEY, voterId);
-      }
-      return voterId;
-    }
+    /* =========================================
+       DISPLAY TEACHERS
+    ========================================= */
 
-    async function saveVoteToSupabase(vote) {
-      const { error } = await supabaseClient.from("votes").insert({
-        teacher: vote.teacherId,
-        vote: JSON.stringify(vote)
-      });
-      if (error) throw error;
-    }
+    function renderTeachers() {
 
-    async function getRemoteVotes() {
-      const { data, error } = await supabaseClient
-        .from("votes")
-        .select("teacher, vote");
+      const grid =
+        document.getElementById("teacherGrid");
 
-      if (error) throw error;
-      return Array.isArray(data) ? data : [];
-    }
+      grid.innerHTML = "";
 
+      const voted =
+        getLocalVote();
 
-    const hofEmpty = $("#hofEmpty");
-    const hofBody = $("#hofBody");
-    const hofPodium = $("#hofPodium");
-    const hofCats = $("#hofCats");
+      teachers.forEach((teacher, index) => {
 
-    async function getTally() {
-      const tally = {};
-      const remoteVotes = await getRemoteVotes();
+        const card =
+          document.createElement("div");
 
-      remoteVotes.forEach(row => {
-        const teacherId = row.teacher || (() => {
-          try { return JSON.parse(row.vote || "{}").teacherId; } catch { return null; }
-        })();
-        if (teacherId) tally[teacherId] = (tally[teacherId] || 0) + 1;
-      });
+        card.className =
+          "teacher-card";
 
-      return tally;
-    }
+        const alreadySelected =
+          voted &&
+          voted.teacherId === teacher.id;
 
-    async function renderHallOfFame() {
-      let tally;
-      try {
-        tally = await getTally();
-      } catch (error) {
-        console.error("Could not load shared votes", error);
-        tally = {};
-      }
-      const rows = [];
-      categories.forEach(category => {
-        (teachers[category.id] || []).forEach(teacher => {
-          const count = tally[teacher.id] || 0;
-          if (count > 0) rows.push({ category, teacher, count });
-        });
-      });
-      rows.sort((a, b) => b.count - a.count || a.teacher[state.lang].localeCompare(b.teacher[state.lang], state.lang));
+        card.innerHTML = `
 
-      hofEmpty.hidden = rows.length > 0;
-      hofBody.hidden = rows.length === 0;
-      hofPodium.replaceChildren();
-      hofCats.replaceChildren();
-      if (!rows.length) return;
+          <div class="teacher-number">
+            ${index + 1}
+          </div>
 
-      rows.slice(0, 3).forEach((row, index) => {
-        const card = document.createElement("article");
-        card.className = `hof-card rank-${index + 1}`;
-        card.style.animationDelay = `${index * 90}ms`;
-        const rank = document.createElement("div");
-        rank.className = "hof-rank";
-        rank.textContent = String(index + 1);
-        const name = document.createElement("h3");
-        name.className = "hof-name";
-        name.textContent = row.teacher[state.lang];
-        const cat = document.createElement("p");
-        cat.className = "hof-cat";
-        cat.textContent = row.category[state.lang];
-        const votes = document.createElement("p");
-        votes.className = "hof-votes";
-        votes.textContent = `${row.count} ${t("votesWord")}`;
-        card.append(rank, name, cat, votes);
-        hofPodium.appendChild(card);
+          <div class="teacher-icon">
+            🎓
+          </div>
+
+          <h3>
+            ${teacher.name}
+          </h3>
+
+          <div class="subject">
+            ${teacher.subject}
+          </div>
+
+          <button
+            class="vote-btn ${alreadySelected ? "selected" : ""}"
+            ${voted ? "disabled" : ""}
+            onclick="openVote('${teacher.id}')"
+          >
+            ${alreadySelected ? "✓ تم التصويت" : voted ? "تم التصويت بالفعل" : "صوّت لهذا المعلم"}
+          </button>
+
+        `;
+
+        grid.appendChild(card);
+
       });
 
-      categories.forEach(category => {
-        const leader = rows.find(row => row.category.id === category.id);
-        if (!leader) return;
-        const card = document.createElement("article");
-        card.className = "hof-cat-card";
-        const iconWrap = document.createElement("span");
-        iconWrap.className = "category-icon";
-        iconWrap.appendChild(makeIcon(category.icon));
-        const info = document.createElement("div");
-        const strong = document.createElement("strong");
-        strong.textContent = leader.teacher[state.lang];
-        const small = document.createElement("small");
-        small.textContent = `${category[state.lang]} · ${leader.count} ${t("votesWord")}`;
-        info.append(strong, small);
-        card.append(iconWrap, info);
-        hofCats.appendChild(card);
-      });
     }
 
-    function t(key) {
-      return translations[state.lang][key] ?? key;
-    }
 
-    function renderStaticTranslations() {
-      document.documentElement.lang = state.lang;
-      document.documentElement.dir = state.lang === "ar" ? "rtl" : "ltr";
-      document.title = t("pageTitle");
+    /* =========================================
+       OPEN VOTE
+    ========================================= */
 
-      const metaDescription = $('meta[name="description"]');
-      if (metaDescription) metaDescription.setAttribute("content", t("metaDescription"));
+    function openVote(teacherId) {
 
-      $$('[data-i18n]').forEach(element => {
-        const key = element.dataset.i18n;
-        element.textContent = t(key);
-      });
+      if (hasVoted()) {
 
-      $$('[data-i18n-placeholder]').forEach(element => {
-        const key = element.dataset.i18nPlaceholder;
-        element.setAttribute("placeholder", t(key));
-      });
+        showToast(
+          "لقد قمت بالتصويت بالفعل. يمكنك التصويت لمعلم واحد فقط."
+        );
 
-      languageToggle.textContent = state.lang === "ar" ? "English" : "العربية";
-      languageToggle.setAttribute("aria-label", t("languageAria"));
-      closeModalButton.setAttribute("aria-label", t("closeAria"));
-
-      renderCategories();
-      renderHallOfFame();
-      if (state.activeCategory) renderTeachers(state.activeCategory, false);
-      updateModalCopy();
-    }
-
-    function renderCategories() {
-      const fragment = document.createDocumentFragment();
-      categoryGrid.replaceChildren();
-
-      categories.forEach((category, index) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "category-card reveal";
-        button.dataset.category = category.id;
-        button.style.transitionDelay = `${Math.min(index * 35, 250)}ms`;
-        button.setAttribute("aria-label", `${t("categoryLabel")}: ${category[state.lang]}`);
-
-        const iconWrap = document.createElement("span");
-        iconWrap.className = "category-icon";
-        iconWrap.appendChild(makeIcon(category.icon));
-
-        const title = document.createElement("h3");
-        title.textContent = category[state.lang];
-
-        const arrow = document.createElement("span");
-        arrow.className = "arrow";
-        const arrowIcon = makeIcon("i-arrow");
-        if (state.lang === "ar") arrowIcon.style.transform = "scaleX(-1)";
-        arrow.appendChild(arrowIcon);
-
-        button.append(iconWrap, title, arrow);
-        button.addEventListener("click", () => renderTeachers(category.id, true));
-        fragment.appendChild(button);
-      });
-
-      categoryGrid.appendChild(fragment);
-      requestAnimationFrame(observeReveals);
-    }
-
-    function renderTeachers(categoryId, shouldScroll = true) {
-      const category = getCategory(categoryId);
-      const list = teachers[categoryId];
-      if (!category || !Array.isArray(list)) {
-        console.error("Unknown category:", categoryId);
         return;
       }
 
-      state.activeCategory = categoryId;
-      teachersSection.hidden = false;
-      teachersTitle.textContent = `${t("chooseTeacher")} · ${category[state.lang]}`;
+      selectedTeacher =
+        teachers.find(
+          teacher => teacher.id === teacherId
+        );
 
-      const votes = getVotes();
-      const categoryVote = votes[categoryId] || null;
-      voteStatus.textContent = categoryVote ? t("votedInCategory") : t("oneVotePerCategory");
+      if (!selectedTeacher) return;
 
-      const fragment = document.createDocumentFragment();
-      teacherGrid.replaceChildren();
+      document.getElementById("selectedName").textContent =
+        selectedTeacher.name +
+        " — " +
+        selectedTeacher.subject;
 
-      list.forEach((teacher, index) => {
-        const card = document.createElement("article");
-        card.className = "teacher-card";
-        if (categoryVote && categoryVote.teacherId === teacher.id) card.classList.add("is-voted");
-        card.style.animationDelay = `${index * 70}ms`;
+      document.getElementById("reason").value = "";
 
-        const avatar = document.createElement("div");
-        avatar.className = "teacher-avatar";
-        avatar.setAttribute("aria-hidden", "true");
-        avatar.appendChild(makeIcon("i-person"));
+      document
+        .getElementById("voteModal")
+        .classList.add("show");
 
-        const name = document.createElement("h3");
-        name.textContent = teacher[state.lang];
-
-        const role = document.createElement("p");
-        role.textContent = t("teacherRole");
-
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = categoryVote ? "button secondary" : "button primary";
-        button.disabled = Boolean(categoryVote);
-
-        const votedThisTeacher = categoryVote && categoryVote.teacherId === teacher.id;
-        button.appendChild(makeIcon(votedThisTeacher ? "i-check" : "i-award"));
-        const label = document.createElement("span");
-        label.textContent = votedThisTeacher ? t("voted") : (categoryVote ? t("votedInCategory") : t("vote"));
-        button.appendChild(label);
-
-        if (!categoryVote) {
-          button.addEventListener("click", () => openVoteModal(categoryId, teacher.id));
-        }
-
-        card.append(avatar, name, role, button);
-        fragment.appendChild(card);
-      });
-
-      teacherGrid.appendChild(fragment);
-
-      if (shouldScroll) {
-        requestAnimationFrame(() => {
-          teachersSection.scrollIntoView({ behavior: "smooth", block: "start" });
-          setTimeout(() => teachersTitle.focus?.(), 450);
-        });
-      }
     }
 
-    function openVoteModal(categoryId, teacherId) {
-      const existingVote = getVotes()[categoryId];
-      if (existingVote) {
-        showToast(t("duplicateVote"));
-        renderTeachers(categoryId, false);
+
+    /* =========================================
+       CLOSE MODAL
+    ========================================= */
+
+    function closeModal() {
+
+      document
+        .getElementById("voteModal")
+        .classList.remove("show");
+
+      selectedTeacher = null;
+
+    }
+
+
+    /* =========================================
+       CONFIRM VOTE
+    ========================================= */
+
+    async function confirmVote() {
+
+      if (!selectedTeacher) return;
+
+      if (hasVoted()) {
+
+        closeModal();
+
+        showToast(
+          "لقد قمت بالتصويت بالفعل."
+        );
+
         return;
       }
 
-      const teacher = (teachers[categoryId] || []).find(item => item.id === teacherId);
-      const category = getCategory(categoryId);
-      if (!teacher || !category) return;
+      const reason =
+        document
+          .getElementById("reason")
+          .value
+          .trim();
 
-      state.selectedTeacher = { categoryId, teacherId };
-      state.previousFocus = document.activeElement;
-      selectedTeacherName.textContent = teacher[state.lang];
-      selectedCategoryName.textContent = category[state.lang];
-      reasonInput.value = "";
-      reasonError.textContent = "";
-      updateCharCount();
-
-      voteModal.classList.add("is-open");
-      voteModal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      setTimeout(() => reasonInput.focus(), 120);
-    }
-
-    function closeVoteModal() {
-      voteModal.classList.remove("is-open");
-      voteModal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-      state.selectedTeacher = null;
-      reasonError.textContent = "";
-      if (state.previousFocus && typeof state.previousFocus.focus === "function") state.previousFocus.focus();
-    }
-
-    function updateModalCopy() {
-      if (!state.selectedTeacher) return;
-      const category = getCategory(state.selectedTeacher.categoryId);
-      const teacher = (teachers[state.selectedTeacher.categoryId] || []).find(item => item.id === state.selectedTeacher.teacherId);
-      if (category && teacher) {
-        selectedTeacherName.textContent = teacher[state.lang];
-        selectedCategoryName.textContent = category[state.lang];
-      }
-    }
-
-    function updateCharCount() {
-      charCount.textContent = `${reasonInput.value.length} / 300`;
-    }
-
-    async function submitVote(event) {
-      event.preventDefault();
-      if (!state.selectedTeacher) return;
-
-      const reason = reasonInput.value.trim();
       if (reason.length < 10) {
-        reasonError.textContent = t("reasonTooShort");
-        reasonInput.focus();
+
+        showToast(
+          "اكتب كلمة تقدير لا تقل عن 10 أحرف."
+        );
+
         return;
       }
 
-      const { categoryId, teacherId } = state.selectedTeacher;
-      const votes = getVotes();
-      if (votes[categoryId]) {
-        closeVoteModal();
-        showToast(t("duplicateVote"));
-        renderTeachers(categoryId, false);
-        return;
-      }
+      const voteData = {
 
-      const teacher = (teachers[categoryId] || []).find(item => item.id === teacherId);
-      if (!teacher) return;
+        teacherId:
+          selectedTeacher.id,
 
-      const vote = {
-        teacherId,
-        teacherNameAr: teacher.ar,
-        teacherNameEn: teacher.en,
-        reason,
-        createdAt: new Date().toISOString(),
-        voterId: getVoterId()
+        teacherName:
+          selectedTeacher.name,
+
+        subject:
+          selectedTeacher.subject,
+
+        reason:
+          reason,
+
+        createdAt:
+          new Date().toISOString()
+
       };
 
+
       try {
-        await saveVoteToSupabase(vote);
-        votes[categoryId] = vote;
-        saveVotes(votes);
-      } catch (error) {
-        console.error("Vote database storage failed", error);
-        reasonError.textContent = t("storageError");
-        return;
-      }
 
-      closeVoteModal();
-      renderTeachers(categoryId, false);
-      renderHallOfFame();
-      showToast(t("voteSaved"));
-    }
+        /*
+          Save to Supabase.
 
-    let toastTimer;
-    function showToast(message) {
-      toastText.textContent = message;
-      toast.classList.add("show");
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => toast.classList.remove("show"), 3600);
-    }
+          teacher = teacher name
+          vote = JSON containing
+                 teacher, subject,
+                 message and date.
+        */
 
-    function changeLanguage() {
-      state.lang = state.lang === "ar" ? "en" : "ar";
-      renderStaticTranslations();
-    }
+        const response =
+          await fetch(
+            SUPABASE_URL +
+            "/rest/v1/votes",
+            {
 
-    function trapModalFocus(event) {
-      if (event.key === "Escape") {
-        closeVoteModal();
-        return;
-      }
-      if (event.key !== "Tab") return;
+              method: "POST",
 
-      const focusable = $$('button:not([disabled]), textarea:not([disabled]), [href], [tabindex]:not([tabindex="-1"])', voteModal)
-        .filter(element => element.offsetParent !== null);
-      if (!focusable.length) return;
+              headers: {
 
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
+                "apikey":
+                  SUPABASE_KEY,
 
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    }
+                "Authorization":
+                  "Bearer " +
+                  SUPABASE_KEY,
 
-    let revealObserver;
-    function observeReveals() {
-      const elements = $$(".reveal:not(.is-visible)");
-      if (!elements.length) return;
+                "Content-Type":
+                  "application/json",
 
-      if (!("IntersectionObserver" in window)) {
-        elements.forEach(el => el.classList.add("is-visible"));
-        return;
-      }
+                "Prefer":
+                  "return=minimal"
 
-      if (!revealObserver) {
-        revealObserver = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              revealObserver.unobserve(entry.target);
+              },
+
+              body: JSON.stringify({
+
+                teacher:
+                  selectedTeacher.name,
+
+                vote:
+                  JSON.stringify(
+                    voteData
+                  )
+
+              })
+
             }
-          });
-        }, { threshold: 0.12 });
+          );
+
+
+        if (!response.ok) {
+
+          const errorText =
+            await response.text();
+
+          console.error(errorText);
+
+          throw new Error(
+            "Supabase error"
+          );
+
+        }
+
+
+        /*
+          Save locally ONLY after
+          Supabase successfully saves.
+        */
+
+        localStorage.setItem(
+          VOTE_KEY,
+          JSON.stringify(voteData)
+        );
+
+
+        closeModal();
+
+        renderTeachers();
+
+        showToast(
+          "تم تسجيل تصويتك وكلمة التقدير بنجاح! ❤️"
+        );
+
+        loadVotes();
+
+      } catch (error) {
+
+        console.error(error);
+
+        showToast(
+          "حدث خطأ أثناء حفظ التصويت. تأكد من اتصال الإنترنت."
+        );
+
       }
 
-      elements.forEach(el => revealObserver.observe(el));
     }
 
-    languageToggle.addEventListener("click", changeLanguage);
-    $("#startVote").addEventListener("click", () => $("#categories").scrollIntoView({ behavior: "smooth", block: "start" }));
-    $("#viewTribute").addEventListener("click", () => $("#tribute").scrollIntoView({ behavior: "smooth", block: "center" }));
-    closeModalButton.addEventListener("click", closeVoteModal);
-    cancelVoteButton.addEventListener("click", closeVoteModal);
-    voteForm.addEventListener("submit", submitVote);
-    reasonInput.addEventListener("input", () => {
-      updateCharCount();
-      if (reasonError.textContent && reasonInput.value.trim().length >= 10) reasonError.textContent = "";
-    });
-    voteModal.addEventListener("click", event => {
-      if (event.target === voteModal) closeVoteModal();
-    });
-    voteModal.addEventListener("keydown", trapModalFocus);
 
-    renderStaticTranslations();
-    observeReveals();
+    /* =========================================
+       LOAD VOTES
+    ========================================= */
+
+    async function loadVotes() {
+
+      try {
+
+        const response =
+          await fetch(
+            SUPABASE_URL +
+            "/rest/v1/votes?select=*&order=id.desc",
+            {
+
+              headers: {
+
+                "apikey":
+                  SUPABASE_KEY,
+
+                "Authorization":
+                  "Bearer " +
+                  SUPABASE_KEY
+
+              }
+
+            }
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            "Could not load votes"
+          );
+
+        }
+
+
+        const rows =
+          await response.json();
+
+
+        const votes =
+          [];
+
+
+        rows.forEach(row => {
+
+          try {
+
+            let data;
+
+            if (
+              typeof row.vote ===
+              "string"
+            ) {
+
+              data =
+                JSON.parse(row.vote);
+
+            } else {
+
+              data =
+                row.vote;
+
+            }
+
+            if (data) {
+
+              data.teacher =
+                row.teacher ||
+                data.teacherName;
+
+              votes.push(data);
+
+            }
+
+          } catch (e) {
+
+            console.warn(
+              "Invalid vote:",
+              row
+            );
+
+          }
+
+        });
+
+
+        renderResults(votes);
+
+        renderMessages(votes);
+
+      } catch (error) {
+
+        console.error(error);
+
+        document.getElementById(
+          "leaderboard"
+        ).innerHTML = `
+
+          <div class="empty">
+            تعذر تحميل النتائج حاليًا.
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+    /* =========================================
+       RESULTS
+    ========================================= */
+
+    function renderResults(votes) {
+
+      const counts = {};
+
+
+      teachers.forEach(
+        teacher => {
+
+          counts[
+            teacher.id
+          ] = 0;
+
+        }
+      );
+
+
+      votes.forEach(vote => {
+
+        if (
+          counts[
+            vote.teacherId
+          ] !== undefined
+        ) {
+
+          counts[
+            vote.teacherId
+          ]++;
+
+        } else {
+
+          const teacher =
+            teachers.find(
+              t =>
+                t.name ===
+                vote.teacherName
+            );
+
+          if (teacher) {
+
+            counts[
+              teacher.id
+            ]++;
+
+          }
+
+        }
+
+      });
+
+
+      const sorted =
+        [...teachers].sort(
+          (a, b) =>
+            counts[b.id] -
+            counts[a.id]
+        );
+
+
+      document.getElementById(
+        "totalVotes"
+      ).textContent =
+        votes.length;
+
+
+      document.getElementById(
+        "teacherCount"
+      ).textContent =
+        teachers.length;
+
+
+      document.getElementById(
+        "leadingVotes"
+      ).textContent =
+        votes.length
+          ? counts[
+              sorted[0].id
+            ]
+          : 0;
+
+
+      const leaderboard =
+        document.getElementById(
+          "leaderboard"
+        );
+
+
+      if (!votes.length) {
+
+        leaderboard.innerHTML = `
+
+          <div class="empty">
+            لا توجد أصوات بعد. كن أول من يصوّت!
+          </div>
+
+        `;
+
+        return;
+      }
+
+
+      leaderboard.innerHTML = "";
+
+
+      sorted.forEach(
+        (teacher, index) => {
+
+          const item =
+            document.createElement("div");
+
+          item.className =
+            "leader";
+
+          item.innerHTML = `
+
+            <div class="rank">
+              ${index + 1}
+            </div>
+
+            <div>
+              <div class="leader-name">
+                ${teacher.name}
+              </div>
+
+              <div class="leader-subject">
+                ${teacher.subject}
+              </div>
+            </div>
+
+            <div class="leader-votes">
+              ${counts[teacher.id]} صوت
+            </div>
+
+          `;
+
+          leaderboard.appendChild(item);
+
+        }
+      );
+
+    }
+
+
+    /* =========================================
+       MESSAGES
+    ========================================= */
+
+    function renderMessages(votes) {
+
+      const grid =
+        document.getElementById(
+          "messageGrid"
+        );
+
+
+      if (!votes.length) {
+
+        grid.innerHTML = `
+
+          <div class="empty">
+            لا توجد رسائل بعد.
+          </div>
+
+        `;
+
+        return;
+      }
+
+
+      grid.innerHTML = "";
+
+
+      votes.forEach(vote => {
+
+        const message =
+          document.createElement("div");
+
+        message.className =
+          "message";
+
+
+        message.innerHTML = `
+
+          <div class="message-teacher">
+            ${escapeHTML(
+              vote.teacherName ||
+              vote.teacher ||
+              "معلم"
+            )}
+          </div>
+
+          <div class="message-text">
+            “${escapeHTML(
+              vote.reason ||
+              ""
+            )}”
+          </div>
+
+        `;
+
+
+        grid.appendChild(message);
+
+      });
+
+    }
+
+
+    /* =========================================
+       SECURITY
+    ========================================= */
+
+    function escapeHTML(text) {
+
+      return String(text)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+    }
+
+
+    /* =========================================
+       TOAST
+    ========================================= */
+
+    function showToast(message) {
+
+      const toast =
+        document.getElementById(
+          "toast"
+        );
+
+      toast.textContent =
+        message;
+
+      toast.classList.add(
+        "show"
+      );
+
+
+      setTimeout(() => {
+
+        toast.classList.remove(
+          "show"
+        );
+
+      }, 3500);
+
+    }
+
+
+    /* =========================================
+       SCROLL
+    ========================================= */
+
+    function scrollToTeachers() {
+
+      document
+        .getElementById("teachers")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    }
+
+
+    function scrollToMessages() {
+
+      document
+        .getElementById("messages")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    }
+
+
+    /* =========================================
+       LANGUAGE BUTTON
+       Simple English toggle
+    ========================================= */
+
+    let english = false;
+
+
+    function toggleLanguage() {
+
+      english = !english;
+
+      if (english) {
+
+        document.documentElement.lang =
+          "en";
+
+        document.documentElement.dir =
+          "ltr";
+
+        document.querySelector(
+          ".lang"
+        ).textContent =
+          "العربية";
+
+        document.querySelector(
+          ".school-name"
+        ).textContent =
+          "East Riffa Primary Intermediate Boys School";
+
+        document.querySelector(
+          ".school-sub"
+        ).textContent =
+          "Teachers' Day 2026";
+
+        document.querySelector(
+          ".hero h1"
+        ).innerHTML =
+          `Celebrating those who make
+           <span class="gradient">
+           a difference every day
+           </span>`;
+
+        document.querySelector(
+          ".hero p"
+        ).innerHTML =
+          `Choose the teacher you think deserves
+           the title of <strong>Best Teacher</strong>
+           and leave a message of appreciation.`;
+
+      } else {
+
+        location.reload();
+
+      }
+
+    }
+
+
+    /* =========================================
+       CLOSE MODAL WHEN CLICKING OUTSIDE
+    ========================================= */
+
+    document
+      .getElementById("voteModal")
+      .addEventListener(
+        "click",
+        event => {
+
+          if (
+            event.target.id ===
+            "voteModal"
+          ) {
+
+            closeModal();
+
+          }
+
+        }
+      );
+
+
+    /* =========================================
+       START
+    ========================================= */
+
+    renderTeachers();
+
+    loadVotes();
+
   </script>
+
 </body>
 </html>
