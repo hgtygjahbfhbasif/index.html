@@ -815,9 +815,9 @@ textarea:focus{
     font-weight:bold;
 }
 
-/* ================================
-   CINEMATIC TERMINAL
-================================ */
+/* =====================================================
+   TEACHER CASE OPENING REVEAL
+===================================================== */
 
 #revealScreen{
     position:fixed;
@@ -828,134 +828,335 @@ textarea:focus{
 
     display:none;
 
-    background:#020403;
+    align-items:center;
+    justify-content:center;
 
-    color:var(--green);
-
-    font-family:
-        "Courier New",
-        monospace;
-}
-
-#revealScreen.show{
-    display:block;
-}
-
-.terminal{
-    position:absolute;
-
-    inset:5%;
-
-    border:1px solid rgba(0,255,102,.55);
-
-    padding:25px;
-
-    overflow:hidden;
+    flex-direction:column;
 
     background:
         radial-gradient(
             circle at center,
-            rgba(0,255,102,.035),
-            transparent 65%
+            #241016 0%,
+            #09090b 48%,
+            #020203 100%
         );
 
-    box-shadow:
-        inset 0 0 70px rgba(0,255,102,.025);
+    color:white;
+
+    overflow:hidden;
 }
 
-.terminal::before{
+#revealScreen.show{
+    display:flex;
+}
+
+.reveal-header{
+    position:absolute;
+
+    top:8%;
+
+    text-align:center;
+
+    z-index:5;
+}
+
+.reveal-kicker{
+    color:#aeb4bd;
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    font-weight:800;
+}
+
+.reveal-title{
+    margin-top:10px;
+
+    font-size:clamp(28px,4vw,48px);
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.case-window{
+    position:relative;
+
+    width:min(1100px,94vw);
+
+    height:300px;
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.06),
+            rgba(255,255,255,.015)
+        );
+
+    border:1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.6),
+        inset 0 0 80px rgba(255,255,255,.025);
+}
+
+.case-window::before{
     content:"";
 
     position:absolute;
 
     inset:0;
 
+    z-index:3;
+
     pointer-events:none;
 
     background:
-        repeating-linear-gradient(
-            to bottom,
-            rgba(255,255,255,.025) 0,
-            rgba(255,255,255,.025) 1px,
-            transparent 1px,
-            transparent 4px
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.8),
+            transparent 18%,
+            transparent 82%,
+            rgba(0,0,0,.8)
         );
 }
 
-.terminal-head{
+.case-track{
+    position:absolute;
+
+    left:0;
+
+    top:50%;
+
+    height:230px;
+
     display:flex;
 
-    justify-content:space-between;
+    align-items:center;
 
-    padding-bottom:12px;
+    gap:14px;
 
-    border-bottom:1px solid rgba(0,255,102,.25);
+    transform:translateY(-50%);
 
-    font-size:13px;
+    will-change:transform;
 }
 
-.terminal-output{
-    margin-top:20px;
+.case-card{
+    flex:0 0 190px;
 
-    line-height:1.7;
+    height:215px;
 
-    font-size:15px;
+    border-radius:20px;
 
-    white-space:pre-wrap;
+    padding:20px 15px;
 
-    max-height:calc(100% - 70px);
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17191e,
+            #0c0d10
+        );
+
+    border:1px solid rgba(255,255,255,.09);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35);
+
+    transition:
+        transform .35s,
+        border-color .35s,
+        box-shadow .35s;
+}
+
+.case-card-icon{
+    width:72px;
+
+    height:72px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #292d35,
+            #14161a
+        );
+
+    font-size:36px;
+
+    margin-bottom:18px;
+}
+
+.case-card-name{
+    font-size:16px;
+
+    font-weight:900;
+
+    line-height:1.5;
+}
+
+.case-card-subject{
+    margin-top:5px;
+
+    color:#888f9a;
+
+    font-size:12px;
+}
+
+.case-card.winner-card{
+    border-color:#ff3040;
+
+    box-shadow:
+        0 0 25px rgba(255,48,64,.5),
+        0 0 70px rgba(255,48,64,.2);
+
+    transform:scale(1.06);
+}
+
+.selection-line{
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    z-index:10;
+
+    transform:translateX(-50%);
+
+    background:#ff3040;
+
+    box-shadow:
+        0 0 12px #ff3040,
+        0 0 35px rgba(255,48,64,.65);
+}
+
+.selection-line::before,
+.selection-line::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    width:0;
+
+    height:0;
+
+    transform:translateX(-50%);
+}
+
+.selection-line::before{
+    top:0;
+
+    border-left:9px solid transparent;
+
+    border-right:9px solid transparent;
+
+    border-top:13px solid #ff3040;
+}
+
+.selection-line::after{
+    bottom:0;
+
+    border-left:9px solid transparent;
+
+    border-right:9px solid transparent;
+
+    border-bottom:13px solid #ff3040;
+}
+
+.spin-status{
+    margin-top:25px;
+
+    color:#858b96;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+}
+
+.spin-status strong{
+    color:white;
+}
+
+/* ================================
+   CONFETTI
+================================ */
+
+#confetti{
+    position:absolute;
+
+    inset:0;
+
+    z-index:20;
+
+    pointer-events:none;
 
     overflow:hidden;
 }
 
-.terminal-line{
-    min-height:24px;
+.confetti-piece{
+    position:absolute;
+
+    top:-20px;
+
+    width:8px;
+
+    height:14px;
+
+    border-radius:2px;
+
+    animation:
+        confettiFall 2.8s ease-out forwards;
 }
 
-.red-text{
-    color:#ff3344;
+@keyframes confettiFall{
 
-    text-shadow:
-        0 0 8px rgba(255,0,0,.6);
-}
-
-.yellow-text{
-    color:#ffd000;
-}
-
-.blue-text{
-    color:#4ba8ff;
-}
-
-.glitch{
-    animation:glitch .09s infinite;
-}
-
-@keyframes glitch{
     0%{
-        transform:translate(0);
-    }
+        opacity:1;
 
-    25%{
-        transform:translate(-4px,2px);
-    }
-
-    50%{
-        transform:translate(4px,-2px);
-    }
-
-    75%{
-        transform:translate(-2px,-3px);
+        transform:
+            translate3d(0,0,0)
+            rotate(0deg);
     }
 
     100%{
-        transform:translate(0);
+        opacity:0;
+
+        transform:
+            translate3d(var(--x),100vh,0)
+            rotate(720deg);
     }
+
 }
 
-/* ================================
-   WINNER
-================================ */
+/* =====================================================
+   WINNER SCREEN
+===================================================== */
 
 #winnerScreen{
     position:fixed;
@@ -967,32 +1168,86 @@ textarea:focus{
     display:none;
 
     align-items:center;
+
     justify-content:center;
 
     flex-direction:column;
 
-    background:#000;
+    background:
+        radial-gradient(
+            circle at center,
+            #350b12 0%,
+            #0b090a 45%,
+            #020202 100%
+        );
 
     color:white;
 
     text-align:center;
+
+    overflow:hidden;
 }
 
 #winnerScreen.show{
     display:flex;
 }
 
+#winnerScreen::before{
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,30,55,.10);
+
+    filter:blur(100px);
+
+    animation:
+        winnerGlow 3s ease-in-out infinite;
+}
+
+@keyframes winnerGlow{
+
+    0%,100%{
+        transform:scale(.9);
+
+        opacity:.5;
+    }
+
+    50%{
+        transform:scale(1.2);
+
+        opacity:1;
+    }
+
+}
+
 .winner-small{
-    color:#777;
+    position:relative;
+
+    z-index:2;
+
+    color:#aeb4bd;
 
     letter-spacing:7px;
 
     font-size:12px;
 
-    animation:fadeUp 1s .3s both;
+    animation:
+        fadeUp .8s .2s both;
 }
 
 .winner-title{
+    position:relative;
+
+    z-index:2;
+
     margin:25px 20px 0;
 
     font-size:clamp(45px,8vw,105px);
@@ -1009,35 +1264,72 @@ textarea:focus{
         0 0 70px var(--red);
 
     animation:
-        winnerIn 1.7s .8s both;
+        winnerIn 1.2s .5s both;
 }
 
 .winner-name{
+    position:relative;
+
+    z-index:2;
+
     margin-top:35px;
 
     font-size:clamp(25px,4vw,45px);
 
     color:#ff3040;
 
-    font-weight:800;
+    font-weight:900;
 
     animation:
-        fadeUp 1s 2s both;
+        fadeUp 1s 1.5s both;
 }
 
 .trophy{
+    position:relative;
+
+    z-index:2;
+
     margin-top:20px;
 
-    font-size:60px;
+    font-size:65px;
 
     animation:
-        fadeUp 1s 2.3s both;
+        trophyPop 1s 1.8s both;
+}
+
+@keyframes trophyPop{
+
+    0%{
+        opacity:0;
+
+        transform:
+            scale(.3)
+            translateY(20px);
+    }
+
+    60%{
+        opacity:1;
+
+        transform:
+            scale(1.2)
+            translateY(0);
+    }
+
+    100%{
+        opacity:1;
+
+        transform:
+            scale(1);
+    }
+
 }
 
 .restart{
     position:fixed;
 
     bottom:25px;
+
+    z-index:10;
 
     border:1px solid #333;
 
@@ -1054,7 +1346,7 @@ textarea:focus{
     font-family:inherit;
 
     animation:
-        fadeUp 1s 3s both;
+        fadeUp 1s 2.5s both;
 }
 
 .restart:hover{
@@ -1064,6 +1356,7 @@ textarea:focus{
 }
 
 @keyframes winnerIn{
+
     from{
         opacity:0;
 
@@ -1088,30 +1381,42 @@ textarea:focus{
         transform:
             scale(1);
     }
+
 }
 
 @keyframes fadeUp{
+
     from{
         opacity:0;
-        transform:translateY(20px);
+
+        transform:
+            translateY(20px);
     }
 
     to{
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translateY(0);
     }
+
 }
 
 @keyframes rise{
+
     from{
         opacity:0;
-        transform:translateY(25px);
+
+        transform:
+            translateY(25px);
     }
 
     to{
         opacity:1;
+
         transform:none;
     }
+
 }
 
 /* ================================
@@ -1128,6 +1433,7 @@ textarea:focus{
 
     .hero p{
         margin-left:auto;
+
         margin-right:auto;
     }
 
@@ -1137,6 +1443,7 @@ textarea:focus{
 
     .hero-card{
         max-width:500px;
+
         width:100%;
 
         margin:auto;
@@ -1147,6 +1454,7 @@ textarea:focus{
         grid-template-columns:
             repeat(2,minmax(0,1fr));
     }
+
 }
 
 @media(max-width:600px){
@@ -1186,13 +1494,32 @@ textarea:focus{
         grid-template-columns:1fr;
     }
 
-    .terminal{
-        inset:3%;
-        padding:15px;
+    .case-window{
+        height:260px;
+
+        width:96vw;
     }
 
-    .terminal-output{
-        font-size:12px;
+    .case-card{
+        flex-basis:155px;
+
+        height:190px;
+    }
+
+    .case-card-icon{
+        width:60px;
+
+        height:60px;
+
+        font-size:28px;
+    }
+
+    .case-card-name{
+        font-size:13px;
+    }
+
+    .case-card-subject{
+        font-size:10px;
     }
 
 }
@@ -1204,6 +1531,7 @@ textarea:focus{
 <body>
 
 <div class="flag"></div>
+
 
 <!-- ================================
      NAV
@@ -1232,6 +1560,7 @@ textarea:focus{
             </div>
 
         </div>
+
 
         <button
             class="lang"
@@ -1591,31 +1920,51 @@ textarea:focus{
 
 
 <!-- ================================
-     REVEAL TERMINAL
+     TEACHER CASE OPENING REVEAL
 ================================ -->
 
 <div id="revealScreen">
 
-    <div class="terminal">
+    <div class="reveal-header">
 
-        <div class="terminal-head">
-
-            <span>
-                FEARLESSNOOB // SECURE TERMINAL
-            </span>
-
-            <span>
-                ● ONLINE
-            </span>
-
+        <div class="reveal-kicker">
+            TEACHERS' DAY 2026
         </div>
+
+        <div class="reveal-title">
+            WHO WILL WIN?
+        </div>
+
+    </div>
+
+
+    <div class="case-window">
+
+        <div
+            class="selection-line"
+            aria-hidden="true"
+        ></div>
 
 
         <div
-            class="terminal-output"
-            id="terminalOutput"
+            class="case-track"
+            id="caseTrack"
         ></div>
 
+
+        <div
+            id="confetti"
+            aria-hidden="true"
+        ></div>
+
+    </div>
+
+
+    <div
+        class="spin-status"
+        id="spinStatus"
+    >
+        THE RESULTS ARE LOCKED
     </div>
 
 </div>
@@ -1628,7 +1977,7 @@ textarea:focus{
 <div id="winnerScreen">
 
     <div class="winner-small">
-        FINAL TRANSMISSION
+        FINAL RESULT
     </div>
 
 
@@ -2397,14 +2746,8 @@ async function getWinner(){
 
 
 /* =====================================================
-   TERMINAL
+   SLEEP
 ===================================================== */
-
-const terminalOutput =
-    document.getElementById(
-        "terminalOutput"
-    );
-
 
 function sleep(ms){
 
@@ -2419,107 +2762,128 @@ function sleep(ms){
 }
 
 
-async function typeLine(
-    text,
-    speed=20,
-    className=""
-){
-
-    const line =
-        document.createElement(
-            "div"
-        );
-
-
-    line.className =
-        "terminal-line " +
-        className;
-
-
-    terminalOutput.appendChild(
-        line
-    );
-
-
-    for(
-        let i=0;
-        i<text.length;
-        i++
-    ){
-
-        line.textContent +=
-            text[i];
-
-
-        terminalOutput.scrollTop =
-            terminalOutput.scrollHeight;
-
-
-        await sleep(speed);
-
-    }
-
-}
-
-
 /* =====================================================
-   PROGRESS
+   CREATE CASE CARD
 ===================================================== */
 
-async function progress(
-    label,
-    duration=1000
+function createCaseCard(
+    teacher,
+    extraClass=""
 ){
 
-    const line =
+    const card =
         document.createElement(
             "div"
         );
 
 
-    line.className =
-        "terminal-line";
+    card.className =
+        "case-card " +
+        extraClass;
 
 
-    terminalOutput.appendChild(
-        line
-    );
+    card.dataset.teacher =
+        teacher.id;
 
 
-    const total = 25;
+    card.innerHTML = `
+
+        <div class="case-card-icon">
+            👨‍🏫
+        </div>
+
+        <div class="case-card-name">
+            ${teacher.name}
+        </div>
+
+        <div class="case-card-subject">
+            ${teacher.subject}
+        </div>
+
+    `;
+
+
+    return card;
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function launchConfetti(){
+
+    const container =
+        document.getElementById(
+            "confetti"
+        );
+
+
+    container.innerHTML = "";
+
+
+    const colors = [
+
+        "#ff3040",
+        "#ffd000",
+        "#ffffff",
+        "#4ba8ff",
+        "#00e5ff"
+
+    ];
 
 
     for(
-        let i=0;
-        i<=total;
+        let i = 0;
+        i < 100;
         i++
     ){
 
-        const percent =
-            Math.floor(
-                i /
-                total *
-                100
+        const piece =
+            document.createElement(
+                "span"
             );
 
 
-        const filled =
-            "█".repeat(i);
+        piece.className =
+            "confetti-piece";
 
 
-        const empty =
-            "░".repeat(
-                total-i
-            );
+        piece.style.left =
+            Math.random() *
+            100 +
+            "%";
 
 
-        line.textContent =
-            `${label} [${filled}${empty}] ${percent}%`;
+        piece.style.setProperty(
+            "--x",
+            (
+                Math.random() *
+                400 -
+                200
+            ) +
+            "px"
+        );
 
 
-        await sleep(
-            duration /
-            total
+        piece.style.animationDelay =
+            Math.random() *
+            .7 +
+            "s";
+
+
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random() *
+                    colors.length
+                )
+            ];
+
+
+        container.appendChild(
+            piece
         );
 
     }
@@ -2528,13 +2892,18 @@ async function progress(
 
 
 /* =====================================================
-   REVEAL
+   CASE OPENING REVEAL
 ===================================================== */
 
 async function startReveal(){
 
     let winner;
 
+
+    /*
+       Get the real winner BEFORE
+       starting the animation.
+    */
 
     try{
 
@@ -2565,143 +2934,250 @@ async function startReveal(){
     }
 
 
+    const revealScreen =
+        document.getElementById(
+            "revealScreen"
+        );
+
+
+    const track =
+        document.getElementById(
+            "caseTrack"
+        );
+
+
+    const status =
+        document.getElementById(
+            "spinStatus"
+        );
+
+
+    revealScreen.classList.add(
+        "show"
+    );
+
+
+    track.innerHTML = "";
+
+
     document.getElementById(
-        "revealScreen"
-    ).classList.add("show");
+        "confetti"
+    ).innerHTML = "";
 
 
-    terminalOutput.innerHTML = "";
+    /*
+       45 cards total.
+       The real winner is placed
+       at a known position.
+    */
+
+    const WINNER_INDEX = 32;
+
+    const TOTAL_CARDS = 45;
+
+    const cards = [];
+
+
+    for(
+        let i = 0;
+        i < TOTAL_CARDS;
+        i++
+    ){
+
+        let teacher;
+
+
+        if(
+            i === WINNER_INDEX
+        ){
+
+            teacher =
+                winner;
+
+        }else{
+
+            teacher =
+                teachers[
+                    Math.floor(
+                        Math.random() *
+                        teachers.length
+                    )
+                ];
+
+        }
+
+
+        /*
+           IMPORTANT:
+           The winner does NOT have
+           the winner glow yet.
+        */
+
+        const card =
+            createCaseCard(
+                teacher
+            );
+
+
+        track.appendChild(
+            card
+        );
+
+
+        cards.push(
+            card
+        );
+
+    }
+
+
+    /*
+       Start position.
+    */
+
+    track.style.transition =
+        "none";
+
+
+    track.style.transform =
+        "translate(0,-50%)";
 
 
     await sleep(500);
 
 
-    await typeLine(
-        "> initializing secure terminal...",
-        25
-    );
-
-
-    await sleep(300);
-
-
-    await typeLine(
-        "> connecting to Teachers' Day database...",
-        20
-    );
-
-
-    await sleep(700);
-
-
-    await typeLine(
-        "[ CONNECTION ESTABLISHED ]",
-        15,
-        "blue-text"
-    );
-
-
-    await sleep(400);
-
-
-    await typeLine(
-        "> retrieving vote records...",
-        20
-    );
-
-
-    await sleep(500);
-
-
-    await progress(
-        "> database scan",
-        1200
-    );
-
-
-    await sleep(400);
-
-
-    await typeLine(
-        "> analyzing teacher votes...",
-        20
-    );
+    status.innerHTML =
+        "SELECTING FROM <strong>ALL TEACHERS</strong>";
 
 
     await sleep(800);
 
 
-    await progress(
-        "> calculating results",
-        1400
+    status.innerHTML =
+        "SPINNING...";
+
+
+    /*
+       Wait for browser layout.
+    */
+
+    await new Promise(
+        requestAnimationFrame
     );
 
 
-    await sleep(500);
+    const winnerCard =
+        cards[
+            WINNER_INDEX
+        ];
 
 
-    await typeLine(
-        "> identifying highest vote count...",
-        20
-    );
-
-
-    await sleep(1000);
-
-
-    await typeLine(
-        "> RESULT FOUND",
-        25,
-        "yellow-text"
-    );
-
-
-    await sleep(700);
-
-
-    const terminal =
+    const windowElement =
         document.querySelector(
-            ".terminal"
+            ".case-window"
         );
 
 
-    terminal.classList.add(
-        "glitch"
-    );
+    const cardRect =
+        winnerCard.getBoundingClientRect();
 
 
-    await typeLine(
-        "> FINAL RESULT LOCKED",
-        20,
-        "red-text"
-    );
+    const windowRect =
+        windowElement.getBoundingClientRect();
 
 
-    await sleep(700);
+    const currentCardCenter =
+        cardRect.left +
+        cardRect.width / 2;
 
 
-    await typeLine(
-        "> PREPARING FINAL TRANSMISSION...",
-        20,
-        "yellow-text"
-    );
+    const windowCenter =
+        windowRect.left +
+        windowRect.width / 2;
+
+
+    /*
+       Calculate exact distance needed
+       to put the winner underneath
+       the red center marker.
+    */
+
+    const distance =
+        windowCenter -
+        currentCardCenter;
+
+
+    await sleep(200);
+
+
+    /*
+       FAST SPIN
+    */
+
+    track.style.transition =
+        "transform 1.2s cubic-bezier(.15,.8,.2,1)";
+
+
+    track.style.transform =
+        `translate(${distance - 1800}px,-50%)`;
 
 
     await sleep(1200);
 
 
-    terminal.classList.remove(
-        "glitch"
+    /*
+       SLOWDOWN
+    */
+
+    status.innerHTML =
+        "SLOWING DOWN...";
+
+
+    track.style.transition =
+        "transform 3.8s cubic-bezier(.08,.72,.12,1)";
+
+
+    track.style.transform =
+        `translate(${distance}px,-50%)`;
+
+
+    await sleep(4000);
+
+
+    /*
+       WINNER STOPPED
+    */
+
+    status.innerHTML =
+        "RESULT LOCKED";
+
+
+    /*
+       NOW the winner glows.
+    */
+
+    winnerCard.classList.add(
+        "winner-card"
     );
 
 
-    document.getElementById(
-        "revealScreen"
-    ).style.display =
-        "none";
+    await sleep(600);
 
 
-    showWinner(winner);
+    launchConfetti();
+
+
+    await sleep(1800);
+
+
+    revealScreen.classList.remove(
+        "show"
+    );
+
+
+    showWinner(
+        winner
+    );
 
 }
 
@@ -2710,7 +3186,9 @@ async function startReveal(){
    SHOW WINNER
 ===================================================== */
 
-function showWinner(winner){
+function showWinner(
+    winner
+){
 
     const screen =
         document.getElementById(
